@@ -1,0 +1,34 @@
+schema_version: 1
+id: household-baseline
+scope: common
+principle: "Books localise the baseline; they do not silently replace it."
+domains:
+  - water
+  - food
+  - heat_and_clothing
+  - light_and_energy
+  - information_and_communications
+  - payments
+  - hygiene
+  - medicines_and_first_aid
+  - pets
+jurisdiction_overrides:
+  NO:
+    planning_period_days: 7
+    water:
+      stored_litres_per_person_week: 20
+      status: authoritative
+      authority: DSB
+    payments:
+      principles:
+        - multiple_payment_cards
+        - physical_bankaxept_card
+        - some_cash
+        - smaller_denominations
+        - accounts_in_multiple_banks
+      cash_amount_rule: household_specific
+      status: authoritative
+      authority: Norges Bank
+notes:
+  - "Cash amount is not a universal fixed number; base it on necessary purchases and what the household already stores."
+  - "Country-specific facts require source and review metadata before publication."
