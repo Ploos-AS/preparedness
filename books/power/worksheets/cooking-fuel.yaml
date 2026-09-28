@@ -1,0 +1,13 @@
+schema_version: 1
+worksheet: cooking-fuel
+fields:
+  - appliance
+  - fuel
+  - container_size
+  - measured_fuel_per_test_meal
+  - planned_hot_meals
+  - reserve_margin
+  - storage_rules_checked
+  - safe_outdoor_location
+  - winter_tested
+note: Estimate only after testing the actual appliance and representative meals.
