@@ -1,0 +1,22 @@
+schema_version: 1
+worksheet: seven-day-menu
+planning_days: 7
+meal_fields:
+  - day
+  - meal
+  - food
+  - cooking_level
+  - cooking_method
+  - cooking_minutes
+  - cooking_water_l
+  - fuel
+  - tested
+cooking_levels:
+  0: no_cook
+  1: minimal_cook
+  2: preparedness_cook
+checks:
+  - at_least_one_no_cook_path
+  - dietary_needs
+  - pet_food
+  - rotation
