@@ -3,6 +3,7 @@ chapters:
   - {id: introduction, no: no/01-innledning.md, en: en/01-introduction.md, parity: required}
   - {id: housing, no: no/02-hus-eller-leilighet.md, en: en/02-house-or-apartment.md, parity: required}
   - {id: seasons, no: no/02b-sommer-vs-vinter.md, en: en/02b-summer-vs-winter.md, parity: required}
+  - {id: baseline, no: no/02c-grunnberedskapen.md, en: en/02c-the-preparedness-baseline.md, parity: required}
   - {id: first-minutes, no: no/03-de-forste-minuttene.md, en: en/03-the-first-minutes.md, parity: required}
   - {id: heat, no: no/04-varme.md, en: en/04-heat.md, parity: required}
   - {id: cooking, no: no/05-matlaging-uten-strom.md, en: en/05-cooking-without-power.md, parity: required}
