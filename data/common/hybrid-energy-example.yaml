@@ -1,0 +1,20 @@
+schema_version: 1
+id: house-wood-battery-generator
+status: method-example
+functions:
+  heat:
+    primary: wood_stove
+  small_continuous_electrical:
+    primary: battery
+  high_power_and_recharge:
+    primary: generator
+  optional_generation:
+    source: solar
+    season_dependent: true
+principles:
+  - separate_heat_from_electricity_where_practical
+  - run_generator_for_defined_jobs
+  - use_battery_for_quiet_low_power_periods
+  - calculate_fuel_from_actual_generator_consumption
+  - maintain_a_fallback_if_one_subsystem_fails
+note: Architecture example only; no appliance wattages or fuel rates are assumed.
