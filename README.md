@@ -68,9 +68,9 @@ See [`docs/architecture.md`](docs/architecture.md) and [`docs/roadmap.md`](docs/
 
 ## Status
 
-**M3 — first toolkit implementation**
+**M4 — first book bootstrap**
 
-The repository now includes the first working offline `ploos-prep` Go CLI with reusable water, battery and power calculations, JSON output and contract tests. See [`docs/m3.md`](docs/m3.md).
+The first book, *Når strømmen går / When the Power Goes Out*, is now bootstrapped under `books/power/` with a complete NO/EN chapter contract, opening manuscript and worksheet integration. See [`docs/m4.md`](docs/m4.md).
 
 ## Licensing
 
