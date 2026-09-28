@@ -68,9 +68,9 @@ See [`docs/architecture.md`](docs/architecture.md) and [`docs/roadmap.md`](docs/
 
 ## Status
 
-**M0 — foundation**
+**M1 — validation and book contract**
 
-The repository establishes the common architecture and policies used by future books and tools.
+The repository now provides machine-readable schemas, CI validation and a reusable NO/EN book skeleton on top of the M0 architecture. See [`docs/m1.md`](docs/m1.md).
 
 ## Licensing
 
