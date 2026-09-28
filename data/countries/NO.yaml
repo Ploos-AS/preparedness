@@ -1,9 +1,12 @@
 schema_version: 1
-country:
-  code: NO
-  names:
-    no: Norge
-    en: Norway
+country: NO
+names:
+  no: Norge
+  en: Norway
+status: seed
+verified_on: null
+review_due: null
+sources: []
 
 locale:
   primary_language: nb-NO
@@ -13,9 +16,6 @@ locale:
 electricity:
   nominal_voltage_v: 230
   frequency_hz: 50
-  note:
-    no: Verifiser alltid installasjon, utstyr og lokale forhold før praktisk bruk.
-    en: Always verify the installation, equipment and local conditions before practical use.
 
 emergency_numbers:
   fire: "110"
@@ -23,8 +23,4 @@ emergency_numbers:
   medical: "113"
   general_european: "112"
 
-provenance:
-  status: seed-data
-  verified_date: null
-  sources: []
-  note: "M0 seed only. Regulatory and safety-sensitive fields must be sourced and verified before publication use."
+note: "M1 seed only. Safety-sensitive and regulatory fields must be sourced and verified before publication use."
