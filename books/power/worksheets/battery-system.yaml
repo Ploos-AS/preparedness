@@ -1,0 +1,20 @@
+schema_version: 1
+worksheet: battery-system
+fields:
+  - battery_type
+  - nominal_voltage_v
+  - nominal_capacity_ah
+  - nominal_energy_wh
+  - planned_usable_energy_wh
+  - dc_loads
+  - inverter_model
+  - inverter_continuous_w
+  - inverter_peak_w
+  - ac_loads
+  - charging_sources
+  - recharge_time_estimate
+  - temperature_assumption
+  - last_tested
+calculations:
+  nominal_energy_wh: voltage_v_times_amp_hours
+principle: Keep nominal capacity, usable energy, power limits and recharge capability separate.
