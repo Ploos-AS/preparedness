@@ -18,3 +18,15 @@ jobs:
           cache: pip
       - run: pip install -r requirements-ci.txt
       - run: python tools/validate.py
+
+  go:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.23.x"
+          cache: true
+      - run: go mod download
+      - run: go test ./...
+      - run: go build ./cmd/ploos-prep
