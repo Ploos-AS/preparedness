@@ -1,5 +1,5 @@
 # Batteries, Inverter and Solar
 
-This chapter is the Europe-first editorial counterpart to the Norwegian edition. It will preserve the same practical outcome while separating universal power-cut planning from country-specific electrical, fuel, fire-safety and official guidance.
+Batteries are quiet and produce no exhaust at the point of use, making them particularly useful for apartments and modest loads. Advertised battery capacity is not identical to energy delivered to an appliance.
 
-M5 manuscript work will expand this chapter using SI units, explicit assumptions, offline worksheets and jurisdiction-labelled sources rather than importing US preparedness conventions.
+Separate nominal watt-hours, usable capacity, conversion losses and load. An inverter converts energy; it does not create it. Solar can extend endurance, but production varies strongly with season, weather, orientation and panel area. Do not size critical winter resilience from an optimistic summer figure.
