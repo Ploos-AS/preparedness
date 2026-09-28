@@ -1,0 +1,12 @@
+schema_version: 1
+worksheet: generator-plan
+fields:
+  - generator_rated_w
+  - fuel_type
+  - safe_outdoor_location
+  - loads
+  - starting_loads_checked
+  - fuel_storage_checked
+  - electrical_connection_method
+  - test_date
+note: Building-wiring connection must use an approved solution appropriate to the jurisdiction.
