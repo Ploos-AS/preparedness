@@ -1,0 +1,30 @@
+schema_version: 1
+country:
+  code: NO
+  names:
+    no: Norge
+    en: Norway
+
+locale:
+  primary_language: nb-NO
+  english_variant: en-GB
+  units: SI
+
+electricity:
+  nominal_voltage_v: 230
+  frequency_hz: 50
+  note:
+    no: Verifiser alltid installasjon, utstyr og lokale forhold før praktisk bruk.
+    en: Always verify the installation, equipment and local conditions before practical use.
+
+emergency_numbers:
+  fire: "110"
+  police: "112"
+  medical: "113"
+  general_european: "112"
+
+provenance:
+  status: seed-data
+  verified_date: null
+  sources: []
+  note: "M0 seed only. Regulatory and safety-sensitive fields must be sourced and verified before publication use."
