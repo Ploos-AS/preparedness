@@ -1,0 +1,12 @@
+schema_version: 1
+worksheet: cash-plan
+fields:
+  - planning_days
+  - necessary_purchases_not_already_stored
+  - estimated_total
+  - cash_total
+  - smaller_denominations
+  - physical_cards
+  - bankaxept_card
+  - multiple_banks
+principle: No universal Ploos cash amount; household planning determines the reserve.
