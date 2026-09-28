@@ -1,0 +1,16 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://ploos.no/schemas/preparedness/tool-output.schema.json",
+  "title":"Ploos Preparedness Toolkit result",
+  "type":"object","additionalProperties":false,
+  "required":["schema_version","tool","inputs","result","units"],
+  "properties":{
+    "schema_version":{"const":1},
+    "tool":{"enum":["water","power","battery","food","radio","checklist"]},
+    "inputs":{"type":"object"},
+    "result":{"type":"object"},
+    "units":{"const":"SI"},
+    "jurisdiction":{"type":["string","null"],"pattern":"^[A-Z]{2}$"},
+    "notes":{"type":"array","items":{"type":"string"}}
+  }
+}
