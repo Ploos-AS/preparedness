@@ -1,0 +1,14 @@
+schema_version: 1
+worksheet: water-test-log
+fields:
+  - date
+  - occupants
+  - duration_hours
+  - starting_stored_water_l
+  - drinking_l
+  - cooking_l
+  - hygiene_l
+  - other_l
+  - remaining_l
+  - lessons
+  - plan_updated
