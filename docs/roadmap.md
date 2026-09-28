@@ -21,13 +21,13 @@
 - Add provenance/freshness rules for verified country data.
 - Document canonical book bootstrap contract.
 
-## M3 — First toolkit implementation
+## M3 — First toolkit implementation — DONE
 
-- Create the Go module and `ploos-prep` CLI.
-- Implement water, battery and power calculations from M2 test vectors.
-- Add `--json` output conforming to the M2 schema.
-- Add unit tests and offline help.
-- Prepare GUI boundary without coupling core calculations to a UI.
+- Go module and `ploos-prep` CLI.
+- Water, battery and power calculations from M2 test vectors.
+- `--json` output conforming to the M2 contract.
+- Unit and contract tests plus CI build qualification.
+- UI-independent calculation core.
 
 ## M4 — First book
 
