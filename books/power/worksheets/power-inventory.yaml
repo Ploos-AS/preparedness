@@ -1,0 +1,13 @@
+schema_version: 1
+worksheet: power-inventory
+fields:
+  - device
+  - quantity
+  - watts
+  - hours_per_day
+  - essential
+derived:
+  - watt_hours_per_day
+toolkit:
+  command: ploos-prep power
+note: Record measured consumption where practical; name estimates as estimates.
