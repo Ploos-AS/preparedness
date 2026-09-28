@@ -1,0 +1,27 @@
+schema_version: 1
+worksheet: hybrid-energy-plan
+sources:
+  - grid
+  - battery
+  - generator
+  - solar
+  - other
+load_fields:
+  - load
+  - priority
+  - preferred_source
+  - fallback_source
+  - watts
+  - watt_hours_per_day
+generator_cycle_fields:
+  - start_time
+  - duration
+  - loads_served
+  - battery_charge_target
+  - expected_fuel
+checks:
+  - battery_can_cover_generator_off_period
+  - generator_can_cover_simultaneous_load_and_charging
+  - starting_loads_checked
+  - safe_generator_location
+  - winter_operation_checked
