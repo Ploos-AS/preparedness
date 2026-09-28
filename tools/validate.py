@@ -37,16 +37,17 @@ def provenance_errors(path):
         errors += 1
     return errors
 
-def parity_errors():
-    manifest=load_yaml(ROOT/"templates/book/chapters.yaml")
+def parity_errors(base):
+    manifest_path=base/"chapters.yaml"
+    manifest=load_yaml(manifest_path)
     errors=0
     for chapter in manifest.get("chapters", []):
         if chapter.get("parity") != "required":
             continue
         for lang in ("no","en"):
             rel=chapter.get(lang)
-            if not rel or not (ROOT/"templates/book"/rel).is_file():
-                print(f"templates/book/chapters.yaml: {chapter.get('id')}: missing {lang} chapter {rel!r}")
+            if not rel or not (base/rel).is_file():
+                print(f"{manifest_path}: {chapter.get('id')}: missing {lang} chapter {rel!r}")
                 errors += 1
     return errors
 
@@ -57,7 +58,12 @@ def main():
     for path in sorted((ROOT/"data/countries").glob("*.yaml")):
         errors += schema_errors(path, country_schema)
         errors += provenance_errors(path)
-    errors += parity_errors()
+    errors += parity_errors(ROOT/"templates/book")
+    for base in sorted((ROOT/"books").glob("*")) if (ROOT/"books").exists() else []:
+        if (base/"book.yaml").is_file():
+            errors += schema_errors(base/"book.yaml", load_json(ROOT/"schemas/book.schema.json"))
+        if (base/"chapters.yaml").is_file():
+            errors += parity_errors(base)
     if errors:
         print(f"FAILED: {errors} validation error(s)")
         return 1
