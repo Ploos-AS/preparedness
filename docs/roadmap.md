@@ -29,11 +29,11 @@
 - Unit and contract tests plus CI build qualification.
 - UI-independent calculation core.
 
-## M4 — First book
+## M4 — First book bootstrap — DONE
 
-Primary candidate: **Når strømmen går / When the Power Goes Out**.
+**Når strømmen går / When the Power Goes Out** now has its canonical manifest, nine-chapter NO/EN structure, opening manuscript, worksheet contract and CI parity validation under `books/power/`.
 
-Build a concise European household power-cut guide with Norwegian localisation, worksheets and toolkit integration.
+The source is ready to move to a dedicated book repository when that repository is created.
 
 ## M5 — Radio series foundation
 
