@@ -1,0 +1,23 @@
+schema_version: 1
+worksheet: water-system
+fields:
+  - water_source
+  - municipal_or_private
+  - electricity_dependent_components
+  - stored_drinking_water_l
+  - occupants
+  - planning_days
+  - alternative_water_source
+  - water_treatment_plan
+  - local_authority_information_source
+private_well:
+  fields:
+    - pump_model
+    - supply_voltage
+    - running_watts
+    - starting_watts
+    - pressure_tank
+    - measured_drawdown_l
+    - generator_tested
+    - inverter_tested
+principle: Stored drinking water remains the baseline even when the normal supply is expected to continue.
