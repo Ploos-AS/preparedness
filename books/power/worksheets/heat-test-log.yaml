@@ -1,0 +1,20 @@
+schema_version: 1
+worksheet: heat-test-log
+fields:
+  - date
+  - outdoor_temperature_c
+  - indoor_start_temperature_c
+  - warm_zone
+  - time_points
+  - heat_source
+  - fuel_or_energy_used
+  - ventilation
+  - occupants_comfortable
+  - problems
+  - relocation_threshold_reviewed
+  - plan_updated
+time_point_fields:
+  - elapsed_hours
+  - warm_zone_temperature_c
+  - other_room_temperature_c
+note: Tests must not create unsafe cold, fire, combustion, frozen-pipe or building conditions.
