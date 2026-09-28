@@ -1,0 +1,11 @@
+schema_version: 1
+chapters:
+  - {id: introduction, no: no/01-innledning.md, en: en/01-introduction.md, parity: required}
+  - {id: first-minutes, no: no/02-de-forste-minuttene.md, en: en/02-the-first-minutes.md, parity: required}
+  - {id: heat, no: no/03-varme.md, en: en/03-heat.md, parity: required}
+  - {id: light, no: no/04-lys.md, en: en/04-light.md, parity: required}
+  - {id: food-water, no: no/05-mat-og-vann.md, en: en/05-food-and-water.md, parity: required}
+  - {id: power, no: no/06-reservestrom.md, en: en/06-backup-power.md, parity: required}
+  - {id: information, no: no/07-informasjon-og-kommunikasjon.md, en: en/07-information-and-communications.md, parity: required}
+  - {id: plan, no: no/08-din-plan.md, en: en/08-your-plan.md, parity: required}
+  - {id: worksheets, no: no/09-arbeidsark.md, en: en/09-worksheets.md, parity: required}
