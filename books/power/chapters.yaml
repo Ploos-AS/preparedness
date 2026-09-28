@@ -17,3 +17,4 @@ chapters:
   - {id: plan, no: no/13-din-plan.md, en: en/13-your-plan.md, parity: required}
   - {id: exercise, no: no/14-strombruddsovelsen.md, en: en/14-the-power-cut-drill.md, parity: required}
   - {id: worksheets, no: no/15-arbeidsark.md, en: en/15-worksheets.md, parity: required}
+  - {id: example-profiles, no: no/15a-eksempelprofiler.md, en: en/15a-example-profiles.md, parity: required}
