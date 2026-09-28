@@ -68,9 +68,9 @@ See [`docs/architecture.md`](docs/architecture.md) and [`docs/roadmap.md`](docs/
 
 ## Status
 
-**M1 — validation and book contract**
+**M2 — toolkit and reusable data contracts**
 
-The repository now provides machine-readable schemas, CI validation and a reusable NO/EN book skeleton on top of the M0 architecture. See [`docs/m1.md`](docs/m1.md).
+The repository now defines reusable book/data/tool contracts, provenance and NO/EN parity validation, an offline-first toolkit architecture and a canonical book bootstrap. See [`docs/m2.md`](docs/m2.md).
 
 ## Licensing
 
