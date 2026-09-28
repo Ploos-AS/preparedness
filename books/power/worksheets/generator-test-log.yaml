@@ -1,0 +1,16 @@
+schema_version: 1
+worksheet: generator-test-log
+fields:
+  - date
+  - ambient_conditions
+  - fuel_age
+  - cold_start_ok
+  - loads_tested
+  - highest_observed_watts
+  - starting_loads_ok
+  - run_minutes
+  - fuel_consumed
+  - battery_charging_tested
+  - faults
+  - maintenance_required
+principle: A stored generator becomes a qualified preparedness system only through periodic safe testing and maintenance.
