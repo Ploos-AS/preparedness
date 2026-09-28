@@ -1,0 +1,25 @@
+schema_version: 1
+id: energy-method-examples
+status: arithmetic-example
+examples:
+  - id: led
+    watts: 5
+    hours: 5
+    watt_hours: 25
+  - id: router
+    watts: 10
+    hours: 8
+    watt_hours: 80
+  - id: radio
+    watts: 3
+    hours: 4
+    watt_hours: 12
+  - id: battery-12v-100ah
+    voltage_v: 12
+    amp_hours: 100
+    nominal_watt_hours: 1200
+  - id: runtime-500wh-100w
+    usable_watt_hours: 500
+    load_watts: 100
+    ideal_runtime_hours: 5
+note: These values demonstrate arithmetic only and are not universal appliance-consumption claims.
