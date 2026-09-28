@@ -1,0 +1,11 @@
+schema_version: 1
+worksheet: baseline-inventory
+domains:
+  water:
+    fields: [people, planning_days, stored_litres]
+  food:
+    fields: [planning_days, no_cook_meals, cooked_meals, special_diet_needs]
+  payments:
+    fields: [physical_cards, bankaxept_available, banks_available, cash_total, smaller_denominations, expected_necessary_purchases]
+  household:
+    fields: [medicines, hygiene, first_aid, pet_food_water, special_needs]
