@@ -1,0 +1,26 @@
+schema_version: 1
+worksheet: energy-budget
+load_fields:
+  - device
+  - priority
+  - supply_type
+  - measured_w
+  - starting_w
+  - hours_per_day
+  - duty_cycle
+  - watt_hours_per_day
+priorities:
+  - must
+  - should
+  - comfort
+operating_modes:
+  normal_preparedness:
+    include: [must, should]
+  conservation:
+    include: [must]
+  minimum:
+    include: [selected_must]
+totals:
+  - wh_per_day
+  - required_days
+  - total_required_wh
