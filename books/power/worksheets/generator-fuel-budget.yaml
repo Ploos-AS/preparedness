@@ -1,0 +1,18 @@
+schema_version: 1
+worksheet: generator-fuel-budget
+fields:
+  - generator
+  - fuel_type
+  - load_profile
+  - documented_or_measured_litres_per_hour
+  - planned_hours_per_day
+  - planning_days
+  - calculated_litres
+  - reserve_margin
+  - total_planned_litres
+  - storage_limit_checked
+  - rotation_plan
+  - last_real_load_test
+calculations:
+  base_litres: litres_per_hour_times_hours_per_day_times_days
+principle: Use manufacturer data or measured consumption for the actual generator and load; do not use a universal fuel-rate assumption.
