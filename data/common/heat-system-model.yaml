@@ -1,0 +1,25 @@
+schema_version: 1
+id: outage-heat-system
+status: architecture
+flow:
+  - building_heat_loss
+  - demand_reduction
+  - warm_zone
+  - primary_heat
+  - alternative_heat
+  - fuel_or_energy
+  - ventilation
+  - detection
+  - relocation_decision
+dependencies:
+  electricity_examples:
+    - heat_pump
+    - circulation_pump
+    - controls
+    - fan
+    - pellet_feed
+principles:
+  - fuel_based_does_not_necessarily_mean_electricity_independent
+  - indoor_combustion_requires_equipment_designed_for_indoor_use
+  - alarms_are_safety_layers_not_permission_for_unsafe_use
+  - relocation_is_a_valid_heat_strategy
