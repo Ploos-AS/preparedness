@@ -1,0 +1,15 @@
+schema_version: 1
+worksheet: operating-modes
+modes:
+  normal_preparedness:
+    purpose: planned critical and useful loads
+  conservation:
+    purpose: extend endurance by removing non-essential loads
+  minimum:
+    purpose: preserve only genuinely critical functions
+fields:
+  - load
+  - normal_preparedness
+  - conservation
+  - minimum
+  - notes
