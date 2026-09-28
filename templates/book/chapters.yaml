@@ -1,0 +1,6 @@
+schema_version: 1
+chapters:
+  - id: introduction
+    no: no/01-introduction.md
+    en: en/01-introduction.md
+    parity: required
