@@ -1,0 +1,15 @@
+schema_version: 1
+worksheet: solar-plan
+fields:
+  - panel_rated_w
+  - panel_count
+  - controller
+  - battery
+  - season
+  - orientation
+  - shading
+  - measured_or_estimated_wh_per_day
+  - estimate_source
+  - poor_weather_plan
+  - winter_plan
+principle: Rated panel watts are not daily energy production.
