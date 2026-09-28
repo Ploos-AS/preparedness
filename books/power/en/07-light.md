@@ -1,5 +1,5 @@
 # Light
 
-This chapter is the Europe-first editorial counterpart to the Norwegian edition. It will preserve the same practical outcome while separating universal power-cut planning from country-specific electrical, fuel, fire-safety and official guidance.
+Head torches and battery lamps provide light without combustion. Keep more than one independent light source and know which batteries they require before an outage.
 
-M5 manuscript work will expand this chapter using SI units, explicit assumptions, offline worksheets and jurisdiction-labelled sources rather than importing US preparedness conventions.
+Candles and other flames add fire risk. Smoke alarms and firefighting equipment must remain effective during the outage.
