@@ -68,9 +68,9 @@ See [`docs/architecture.md`](docs/architecture.md) and [`docs/roadmap.md`](docs/
 
 ## Status
 
-**M2 — toolkit and reusable data contracts**
+**M3 — first toolkit implementation**
 
-The repository now defines reusable book/data/tool contracts, provenance and NO/EN parity validation, an offline-first toolkit architecture and a canonical book bootstrap. See [`docs/m2.md`](docs/m2.md).
+The repository now includes the first working offline `ploos-prep` Go CLI with reusable water, battery and power calculations, JSON output and contract tests. See [`docs/m3.md`](docs/m3.md).
 
 ## Licensing
 
