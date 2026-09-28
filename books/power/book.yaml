@@ -1,0 +1,11 @@
+schema_version: 1
+id: power-outage
+series: ploos-preparedness
+titles:
+  no: Når strømmen går
+  en: When the Power Goes Out
+languages: [no, en]
+audience: europe-and-norway
+outputs: [html, epub, kindle, pdf]
+country_data: [NO]
+publishing_profile: preparedness-book
