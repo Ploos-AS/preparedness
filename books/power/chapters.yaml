@@ -1,11 +1,17 @@
 schema_version: 1
 chapters:
   - {id: introduction, no: no/01-innledning.md, en: en/01-introduction.md, parity: required}
-  - {id: first-minutes, no: no/02-de-forste-minuttene.md, en: en/02-the-first-minutes.md, parity: required}
-  - {id: heat, no: no/03-varme.md, en: en/03-heat.md, parity: required}
-  - {id: light, no: no/04-lys.md, en: en/04-light.md, parity: required}
-  - {id: food-water, no: no/05-mat-og-vann.md, en: en/05-food-and-water.md, parity: required}
-  - {id: power, no: no/06-reservestrom.md, en: en/06-backup-power.md, parity: required}
-  - {id: information, no: no/07-informasjon-og-kommunikasjon.md, en: en/07-information-and-communications.md, parity: required}
-  - {id: plan, no: no/08-din-plan.md, en: en/08-your-plan.md, parity: required}
-  - {id: worksheets, no: no/09-arbeidsark.md, en: en/09-worksheets.md, parity: required}
+  - {id: housing, no: no/02-hus-eller-leilighet.md, en: en/02-house-or-apartment.md, parity: required}
+  - {id: first-minutes, no: no/03-de-forste-minuttene.md, en: en/03-the-first-minutes.md, parity: required}
+  - {id: heat, no: no/04-varme.md, en: en/04-heat.md, parity: required}
+  - {id: cooking, no: no/05-matlaging-uten-strom.md, en: en/05-cooking-without-power.md, parity: required}
+  - {id: food-water, no: no/06-mat-vann-kjol-og-frys.md, en: en/06-food-water-fridge-and-freezer.md, parity: required}
+  - {id: light, no: no/07-lys.md, en: en/07-light.md, parity: required}
+  - {id: backup-power, no: no/08-reservestrom.md, en: en/08-backup-power.md, parity: required}
+  - {id: generator, no: no/09-aggregat.md, en: en/09-generator.md, parity: required}
+  - {id: batteries, no: no/10-batteribank-inverter-sol.md, en: en/10-batteries-inverter-solar.md, parity: required}
+  - {id: information, no: no/11-informasjon-og-kommunikasjon.md, en: en/11-information-and-communications.md, parity: required}
+  - {id: sanitation, no: no/12-vann-avlop-og-hygiene.md, en: en/12-water-sanitation-and-hygiene.md, parity: required}
+  - {id: plan, no: no/13-din-plan.md, en: en/13-your-plan.md, parity: required}
+  - {id: exercise, no: no/14-strombruddsovelsen.md, en: en/14-the-power-cut-drill.md, parity: required}
+  - {id: worksheets, no: no/15-arbeidsark.md, en: en/15-worksheets.md, parity: required}
