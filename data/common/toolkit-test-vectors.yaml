@@ -1,0 +1,26 @@
+schema_version: 1
+vectors:
+  - id: water-basic
+    tool: water
+    inputs:
+      people: 2
+      days: 3
+      litres_per_person_day: 3
+    expected:
+      litres: 18
+
+  - id: battery-wh-basic
+    tool: battery
+    inputs:
+      voltage_v: 12
+      capacity_ah: 10
+    expected:
+      nominal_wh: 120
+
+  - id: power-runtime-basic
+    tool: power
+    inputs:
+      usable_wh: 400
+      load_w: 100
+    expected:
+      runtime_hours: 4
