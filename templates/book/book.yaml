@@ -1,0 +1,39 @@
+schema_version: 1
+project:
+  id: example-book
+  status: draft
+  series:
+    no: Ploos Beredskap
+    en: Ploos Preparedness
+
+editions:
+  no:
+    language: nb-NO
+    title: Eksempelbok
+    market: Norway
+  en:
+    language: en-GB
+    title: Example Book
+    market: Europe
+
+publishing:
+  formats:
+    - html
+    - epub
+    - kindle
+    - pdf
+  pipeline: ploos-publishing
+
+content:
+  chapter_manifest: chapters.yaml
+  assets_dir: assets
+  references_dir: references
+
+policy:
+  europe_first_en: true
+  norway_first_no: true
+  si_units: true
+  safety_review_required: true
+  regulatory_claims_require_scope: true
+  regulatory_claims_require_source: true
+  regulatory_claims_require_verified_date: true
