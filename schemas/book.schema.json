@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ploos.no/schemas/preparedness/book.schema.json",
+  "title": "Ploos Preparedness book manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version","id","series","titles","languages","audience","outputs"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "id": {"type":"string","pattern":"^[a-z0-9][a-z0-9-]*$"},
+    "series": {"enum":["ploos-preparedness"]},
+    "titles": {
+      "type":"object","required":["no","en"],"additionalProperties":false,
+      "properties":{"no":{"type":"string","minLength":1},"en":{"type":"string","minLength":1}}
+    },
+    "languages": {
+      "type":"array","minItems":2,"uniqueItems":true,
+      "items":{"enum":["no","en"]},"allOf":[{"contains":{"const":"no"}},{"contains":{"const":"en"}}]
+    },
+    "audience": {"enum":["europe","norway","europe-and-norway"]},
+    "outputs": {
+      "type":"array","uniqueItems":true,"minItems":4,
+      "items":{"enum":["html","epub","kindle","pdf"]},
+      "allOf":[{"contains":{"const":"html"}},{"contains":{"const":"epub"}},{"contains":{"const":"kindle"}},{"contains":{"const":"pdf"}}]
+    },
+    "country_data":{"type":"array","items":{"type":"string","pattern":"^[A-Z]{2}$"},"uniqueItems":true},
+    "publishing_profile":{"type":"string","minLength":1}
+  }
+}
