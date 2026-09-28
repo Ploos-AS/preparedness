@@ -1,0 +1,12 @@
+schema_version: 1
+worksheet: home-profile
+fields:
+  - housing_type
+  - occupants
+  - normal_heat_source
+  - alternative_heat_source
+  - warm_zone
+  - safe_cooking_location
+  - stored_water_litres
+  - relocation_destination
+  - special_needs
