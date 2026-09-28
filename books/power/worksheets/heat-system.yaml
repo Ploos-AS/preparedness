@@ -1,0 +1,24 @@
+schema_version: 1
+worksheet: heat-system
+fields:
+  - normal_heat_sources
+  - electricity_dependent_components
+  - alternative_heat_sources
+  - warm_zone
+  - occupants
+  - vulnerable_occupants
+  - smoke_alarms
+  - carbon_monoxide_strategy
+  - fire_extinguisher
+  - relocation_destination
+  - relocation_triggers
+heat_source_fields:
+  - source
+  - fuel
+  - indoor_approved
+  - electrical_watts
+  - starting_watts
+  - measured_fuel_per_hour
+  - planned_hours_per_day
+  - tested
+principle: Reduce heat demand first; then qualify each heat source as a complete system.
