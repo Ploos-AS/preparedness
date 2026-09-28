@@ -1,0 +1,14 @@
+schema_version: 1
+id: outage-water-system
+status: architecture
+flow:
+  - source
+  - abstraction_or_supply
+  - pumping
+  - pressure_storage
+  - building_distribution
+  - tap
+  - use
+  - drain
+  - sewer_or_septic
+principle: Identify electricity-dependent components in both supply and wastewater paths.
