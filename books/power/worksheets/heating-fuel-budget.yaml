@@ -1,0 +1,14 @@
+schema_version: 1
+worksheet: heating-fuel-budget
+fields:
+  - heat_source
+  - fuel
+  - documented_or_measured_consumption
+  - consumption_unit
+  - planned_hours_per_day
+  - planning_days
+  - calculated_requirement
+  - reserve_margin
+  - storage_rules_checked
+  - rotation_or_condition_check
+principle: Use actual appliance data or safe measurements rather than a universal fuel-consumption assumption.
