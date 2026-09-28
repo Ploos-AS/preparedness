@@ -1,0 +1,14 @@
+schema_version: 1
+worksheet: sanitation-plan
+fields:
+  - sewer_type
+  - gravity_or_pumped
+  - electricity_dependent_components
+  - toilet_plan_if_sewer_unavailable
+  - hand_hygiene
+  - waste_storage
+  - cleaning_water_source
+  - household_specific_needs
+checks:
+  - do_not_assume_toilet_flushing_is_safe_when_downstream_system_is_unavailable
+  - separate_drinking_water_from_utility_water
