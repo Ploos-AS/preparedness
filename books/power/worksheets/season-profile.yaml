@@ -1,0 +1,21 @@
+schema_version: 1
+worksheet: season-profile
+profiles:
+  winter:
+    fields:
+      - outdoor_design_temperature
+      - warm_zone
+      - alternative_heat
+      - pipe_freeze_plan
+      - winter_lighting
+      - outdoor_cooking_access
+      - generator_access
+      - relocation_trigger
+  summer:
+    fields:
+      - refrigeration_priority
+      - food_spoilage_plan
+      - drinking_water_adjustment
+      - overheating_plan
+      - outdoor_cooking_access
+      - solar_assumption
