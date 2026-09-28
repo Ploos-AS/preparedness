@@ -1,42 +1,41 @@
 # Roadmap
 
-## M0 — Foundation
+## M0 — Foundation — DONE
 
-- Define Ploos Preparedness / Ploos Beredskap identity.
-- Establish Europe-first English scope and Norway-first Norwegian scope.
-- Define translation/localisation policy.
-- Define editorial and sourcing policy.
-- Define repository architecture and book conventions.
-- Define licensing boundaries.
-- Add initial book manifest template.
-- Add initial structured country data.
+- Identity, Europe-first/NO-first scope, localisation and editorial policy.
+- Repository architecture, licensing and initial structured country data.
 
-## M1 — Validation and publishing qualification
+## M1 — Validation and book contract — DONE
 
-- Add schemas for country data and book manifests.
-- Add CI validation for YAML and internal links.
-- Add NO/EN manifest parity checks.
-- Add source/provenance checks for sensitive data.
-- Integrate the shared Ploos `publishing` pipeline.
-- Qualify HTML, EPUB, Kindle-compatible and PDF outputs.
+- Book and country JSON Schemas.
+- CI validation.
+- NO/EN reusable book skeleton.
+- Publishing contract for HTML, EPUB, Kindle and PDF.
 
-## M2 — Preparedness Toolkit core
+## M2 — Toolkit and reusable data contracts — DONE
 
-- Establish `ploos-prep` CLI architecture.
-- Implement water and battery/power calculations.
-- Add checklist export.
-- Define stable machine-readable output.
-- Add offline documentation.
+- Define stable `ploos-prep` machine-readable result contract.
+- Establish offline-first Go-oriented toolkit architecture.
+- Add deterministic water and battery/power test vectors.
+- Add NO/EN chapter parity contract and validation.
+- Add provenance/freshness rules for verified country data.
+- Document canonical book bootstrap contract.
 
-## M3 — First book
+## M3 — First toolkit implementation
 
-Primary candidate:
+- Create the Go module and `ploos-prep` CLI.
+- Implement water, battery and power calculations from M2 test vectors.
+- Add `--json` output conforming to the M2 schema.
+- Add unit tests and offline help.
+- Prepare GUI boundary without coupling core calculations to a UI.
 
-**Når strømmen går / When the Power Goes Out**
+## M4 — First book
 
-Target a concise, practical European household power-cut guide with Norwegian localisation and reusable worksheets/tool integration.
+Primary candidate: **Når strømmen går / When the Power Goes Out**.
 
-## M4 — Radio series foundation
+Build a concise European household power-cut guide with Norwegian localisation, worksheets and toolkit integration.
+
+## M5 — Radio series foundation
 
 - Radio when networks are unavailable.
 - ATS-20 receive-oriented guide.
@@ -45,4 +44,4 @@ Target a concise, practical European household power-cut guide with Norwegian lo
 
 ## Later
 
-Candidate subjects include water, rotating food storage, budget preparedness, apartment preparedness, cabin preparedness, digital preparedness, 72-hour starter guides and a comprehensive handbook.
+Water, rotating food storage, budget preparedness, apartment/cabin preparedness, digital preparedness, 72-hour starter guides and a comprehensive handbook.
