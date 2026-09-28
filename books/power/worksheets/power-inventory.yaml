@@ -3,11 +3,17 @@ worksheet: power-inventory
 fields:
   - device
   - quantity
-  - watts
+  - measured_watts
+  - starting_watts
   - hours_per_day
+  - duty_cycle
   - essential
 derived:
   - watt_hours_per_day
 toolkit:
-  command: ploos-prep power
-note: Record measured consumption where practical; name estimates as estimates.
+  commands:
+    - ploos-prep battery
+    - ploos-prep power
+future_toolkit:
+  - ploos-prep energy
+note: Record measured consumption where practical; name estimates as estimates. The future energy command will calculate Wh/day directly from watts, hours and duty cycle.
