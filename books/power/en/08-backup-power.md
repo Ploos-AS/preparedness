@@ -1,5 +1,5 @@
 # Backup Power
 
-This chapter is the Europe-first editorial counterpart to the Norwegian edition. It will preserve the same practical outcome while separating universal power-cut planning from country-specific electrical, fuel, fire-safety and official guidance.
+Start with needs, not products. Divide loads into **must work**, **should work** and **comfort**, then record watts, daily operating time and starting requirements.
 
-M5 manuscript work will expand this chapter using SI units, explicit assumptions, offline worksheets and jurisdiction-labelled sources rather than importing US preparedness conventions.
+Phones, lighting and radios may be covered efficiently by small battery banks; large 230 V loads rapidly require much more energy. Use `ploos-prep battery` and `ploos-prep power` to make assumptions visible.
