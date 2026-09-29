@@ -42,3 +42,9 @@ sources:
     url: https://www.dsb.no/sikkerhverdag/strom/elektrikerarbeid-i-boligen/
     verified_on: "2026-09-29"
     review_due: "2027-03-29"
+  - id: dsb-lithium-ion-fire-risk
+    authority: DSB
+    title: Risikovurdering og håndtering av brann i Litium-ion batterier
+    url: https://www.dsb.no/siteassets/rapporter-og-publikasjoner/veileder/risikovurdering_og_haandtering_av_brann_i_litium-ion_batterier.pdf
+    verified_on: "2026-09-29"
+    review_due: "2027-03-29"
