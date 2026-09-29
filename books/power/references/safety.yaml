@@ -1,0 +1,44 @@
+schema_version: 1
+sources:
+  - id: dsb-heat-light-outage
+    authority: DSB
+    title: Slik beholder du varme og lys hvis strømmen går
+    url: https://www.dsb.no/sikkerhverdag/egenberedskap/slik-beholder-du-varme-og-lys-hvis-strommen-gar/
+    verified_on: 2026-09-29
+    review_due: 2027-03-29
+  - id: dsb-small-gas-containers
+    authority: DSB
+    title: Bruk og oppbevaring av små gassbeholdere
+    url: https://www.dsb.no/sikkerhverdag/gass-og-brannfarlig-vaske/bruk-og-oppbevaring-av-sma-gassbeholdere/
+    verified_on: 2026-09-29
+    review_due: 2027-03-29
+  - id: dsb-gas-heaters
+    authority: DSB
+    title: Trygg bruk av gassovner
+    url: https://www.dsb.no/sikkerhverdag/gass-og-brannfarlig-vaske/trygg-bruk-av-gassovner/
+    verified_on: 2026-09-29
+    review_due: 2027-03-29
+  - id: dsb-carbon-monoxide
+    authority: DSB
+    title: Slik unngår du kullosforgiftning
+    url: https://www.dsb.no/sikkerhverdag/gass-og-brannfarlig-vaske/slik-unngar-du-kullosforgiftning/
+    verified_on: 2026-09-29
+    review_due: 2027-03-29
+  - id: dsb-low-voltage-installations
+    authority: DSB
+    title: Veiledning til forskrift om elektriske lavspenningsanlegg
+    url: https://www.dsb.no/elsikkerhet/elektriske-anlegg-og-utstyr/veiledning-til-forskrift-om-elektriske-lavspenningsanlegg/
+    verified_on: 2026-09-29
+    review_due: 2027-03-29
+  - id: dsb-ev-as-power-source
+    authority: DSB
+    title: Elbilen som strømforsyning
+    url: https://www.dsb.no/sikkerhverdag/strom/elbilen-som-stromforsyning/
+    verified_on: 2026-09-29
+    review_due: 2027-03-29
+  - id: dsb-electrical-work-home
+    authority: DSB
+    title: Elektrikerarbeid i boligen
+    url: https://www.dsb.no/sikkerhverdag/strom/elektrikerarbeid-i-boligen/
+    verified_on: 2026-09-29
+    review_due: 2027-03-29
