@@ -48,3 +48,9 @@ sources:
     url: https://www.dsb.no/siteassets/rapporter-og-publikasjoner/veileder/risikovurdering_og_haandtering_av_brann_i_litium-ion_batterier.pdf
     verified_on: "2026-09-29"
     review_due: "2027-03-29"
+  - id: eu-battery-regulation-stationary-safety
+    authority: European Union
+    title: Regulation (EU) 2023/1542 - Article 12, safety of stationary battery energy storage systems
+    url: https://eur-lex.europa.eu/eli/reg/2023/1542/2023-07-28
+    verified_on: "2026-09-29"
+    review_due: "2027-03-29"
