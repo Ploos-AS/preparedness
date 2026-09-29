@@ -12,7 +12,7 @@ The full MIT licence text is provided in `LICENSES/MIT.txt`.
 
 Documentation under `docs/` and reusable prose/templates intended for authoring are licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)** unless a file states otherwise.
 
-The full licence text is provided in `LICENSES/CC-BY-4.0.txt`.
+SPDX identifier: `CC-BY-4.0`. Canonical legal code: https://creativecommons.org/licenses/by/4.0/legalcode.en
 
 ## Power book
 
@@ -26,7 +26,7 @@ Original reusable structured datasets under `data/` are intended to be broadly r
 
 This does **not** relicense third-party source material. Source attribution, provenance and any upstream licence obligations remain applicable. Data derived from a source with attribution or other licence conditions must record and preserve those conditions.
 
-The full CC0 legal text is provided in `LICENSES/CC0-1.0.txt`.
+SPDX identifier: `CC0-1.0`. Canonical legal code: https://creativecommons.org/publicdomain/zero/1.0/legalcode.en
 
 ## Third-party material
 
