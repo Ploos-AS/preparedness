@@ -66,17 +66,24 @@ def safety_source_errors(base):
         print(f"{base/'chapters.yaml'}: hazard chapters require {registry_path}")
         return 1
     registry=load_yaml(registry_path)
-    ids={source.get("id") for source in registry.get("sources", [])}
+    sources={source.get("id"): source for source in registry.get("sources", [])}
     errors=0
     for chapter in hazard_chapters:
         refs=chapter.get("safety_sources", [])
         if not refs:
             print(f"{base/'chapters.yaml'}: {chapter.get('id')}: hazards require safety_sources")
             errors += 1
+        covered=set()
         for ref in refs:
-            if ref not in ids:
+            if ref not in sources:
                 print(f"{base/'chapters.yaml'}: {chapter.get('id')}: unknown safety source {ref!r}")
                 errors += 1
+                continue
+            covered.update(sources[ref].get("supports", []))
+        missing=set(chapter.get("hazards", [])) - covered
+        if missing:
+            print(f"{base/'chapters.yaml'}: {chapter.get('id')}: hazards lack qualified source coverage: {', '.join(sorted(missing))}")
+            errors += 1
     return errors
 
 def parity_errors(base):
