@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ploos.no/schemas/preparedness/baseline.schema.json",
+  "title": "Ploos Preparedness household baseline",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "scope", "principle", "domains", "jurisdiction_overrides"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "id": {"const": "household-baseline"},
+    "scope": {"const": "common"},
+    "principle": {"type": "string", "minLength": 1},
+    "domains": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"}
+    },
+    "jurisdiction_overrides": {
+      "type": "object",
+      "minProperties": 1,
+      "patternProperties": {
+        "^[A-Z]{2}$": {"$ref": "#/$defs/jurisdiction"}
+      },
+      "additionalProperties": false
+    },
+    "notes": {"type": "array", "items": {"type": "string", "minLength": 1}}
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "url", "source_license", "verified_on", "review_due"],
+      "properties": {
+        "title": {"type": "string", "minLength": 1},
+        "url": {"type": "string", "format": "uri"},
+        "source_license": {"type": "string", "minLength": 1},
+        "verified_on": {"type": "string", "format": "date"},
+        "review_due": {"type": "string", "format": "date"}
+      }
+    },
+    "authoritative": {
+      "type": "object",
+      "required": ["status", "authority", "source"],
+      "properties": {
+        "status": {"const": "authoritative"},
+        "authority": {"type": "string", "minLength": 1},
+        "source": {"$ref": "#/$defs/source"}
+      }
+    },
+    "jurisdiction": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["planning_period_days"],
+      "properties": {
+        "planning_period_days": {"type": "integer", "minimum": 1},
+        "water": {
+          "allOf": [
+            {"$ref": "#/$defs/authoritative"},
+            {
+              "type": "object",
+              "required": ["stored_litres_per_person_week"],
+              "properties": {
+                "stored_litres_per_person_week": {"type": "number", "exclusiveMinimum": 0}
+              }
+            }
+          ]
+        },
+        "payments": {
+          "allOf": [
+            {"$ref": "#/$defs/authoritative"},
+            {
+              "type": "object",
+              "required": ["principles", "cash_amount_rule"],
+              "properties": {
+                "principles": {
+                  "type": "array",
+                  "minItems": 1,
+                  "uniqueItems": true,
+                  "items": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"}
+                },
+                "cash_amount_rule": {"type": "string", "minLength": 1}
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
