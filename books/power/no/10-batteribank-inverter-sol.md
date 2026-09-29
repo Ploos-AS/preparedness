@@ -77,3 +77,22 @@ For et hus kan en robust løsning være:
 Da slipper aggregatet nødvendigvis å gå kontinuerlig.
 
 I en leilighet er batteri/power station ofte langt mer praktisk enn forbrenningsbasert produksjon, men energibudsjettet må da være desto strengere.
+
+
+## Behold driftsmoduser
+
+Definer minst tre moduser: normal beredskapsdrift, sparemodus og minimumsdrift. Bestem hvilke laster som kobles bort på hvert trinn før batteriet nærmer seg tomt.
+
+Reserver energi til funksjonene som betyr mest, i stedet for å behandle alle tilgjengelige wattimer som umiddelbart forbrukbare.
+
+## Mål det virkelige systemet
+
+For hver kritiske last registrerer du målt eller dokumentert effekt, timer per døgn, eventuell driftssyklus, starteffekt og om AC-konvertering er nødvendig.
+
+Test deretter hele kjeden du faktisk skal bruke: lader, batteri, inverter eller DC-utgang, kabel og apparat. Reell beredskapskapasitet er den kapasiteten systemet kan levere sikkert og repeterbart, ikke bare tallet som står på én komponent.
+
+## Sikkerhet må følge batterikjemien
+
+Batteribank, lader, kabling, sikring, inverter og eventuell solregulator er ett elektrisk system. Følg produsentens grenser for den konkrete batterikjemien og utstyret, og bruk komponenter og beskyttelse som er beregnet for systemets spenning og strøm.
+
+Boka skal ikke anta universelle temperaturgrenser, ladegrenser eller ventilasjonskrav på tvers av batterikjemier. Slike sikkerhetskritiske grenser må kvalifiseres mot primærkilder før de oppgis som konkrete tall eller regler.
