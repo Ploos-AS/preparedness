@@ -98,11 +98,14 @@ def main():
     for path in sorted((ROOT/"data/countries").glob("*.yaml")):
         errors += schema_errors(path, country_schema)
         errors += provenance_errors(path)
+    chapter_schema=load_json(ROOT/"schemas/chapters.schema.json")
+    errors += schema_errors(ROOT/"templates/book/chapters.yaml", chapter_schema)
     errors += parity_errors(ROOT/"templates/book")
     for base in sorted((ROOT/"books").glob("*")) if (ROOT/"books").exists() else []:
         if (base/"book.yaml").is_file():
             errors += schema_errors(base/"book.yaml", load_json(ROOT/"schemas/book.schema.json"))
         if (base/"chapters.yaml").is_file():
+            errors += schema_errors(base/"chapters.yaml", chapter_schema)
             errors += parity_errors(base)
     if errors:
         print(f"FAILED: {errors} validation error(s)")
