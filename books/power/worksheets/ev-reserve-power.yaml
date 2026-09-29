@@ -1,0 +1,26 @@
+schema_version: 1
+worksheet: ev-reserve-power
+capability:
+  - vehicle
+  - v2l_supported
+  - v2h_supported
+  - manufacturer_approved_adapter_or_interface
+  - maximum_output_w
+energy_plan:
+  - battery_capacity_wh
+  - state_of_charge_start_percent
+  - mobility_reserve_percent
+  - energy_available_for_preparedness_wh
+  - priority_loads
+  - expected_wh_per_day
+  - planned_days
+recharge:
+  - normal_charging_location
+  - alternative_charging_location
+  - minimum_range_required
+safety:
+  - manufacturer_instructions_checked
+  - dsb_guidance_checked
+  - no_improvised_house_backfeed
+  - fixed_installation_by_qualified_registered_business_if_required
+principle: Preserve enough vehicle energy for required mobility; V2L, a separate reserve installation and V2H are distinct architectures.
