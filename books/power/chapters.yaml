@@ -62,7 +62,7 @@ chapters:
     parity: required
     parity_revision: 1
     hazards: [carbon_monoxide, electric_shock, backfeed, fire, fuel_storage]
-    safety_sources: [dsb-carbon-monoxide, dsb-low-voltage-installations, dsb-electrical-work-home]
+    safety_sources: [dsb-carbon-monoxide, dsb-low-voltage-installations, dsb-electrical-work-home, dsb-small-gas-containers]
   - id: batteries
     "no": no/10-batteribank-inverter-sol.md
     en: en/10-batteries-inverter-solar.md
