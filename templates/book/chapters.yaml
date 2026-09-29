@@ -3,8 +3,10 @@ chapters:
   - id: frontmatter
     no: no/00-frontmatter.md
     en: en/00-frontmatter.md
-    parity: required, parity_revision: 1
+    parity: required
+    parity_revision: 1
   - id: introduction
     no: no/01-introduction.md
     en: en/01-introduction.md
-    parity: required, parity_revision: 1
+    parity: required
+    parity_revision: 1
