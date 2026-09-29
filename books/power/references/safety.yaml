@@ -1,54 +1,63 @@
 schema_version: 1
 sources:
   - id: dsb-heat-light-outage
+    supports: [fire, combustion, ventilation]
     authority: DSB
     title: Slik beholder du varme og lys hvis strømmen går
     url: https://www.dsb.no/sikkerhverdag/egenberedskap/slik-beholder-du-varme-og-lys-hvis-strommen-gar/
     verified_on: "2026-09-29"
     review_due: "2027-03-29"
   - id: dsb-small-gas-containers
+    supports: [fire, combustion, fuel_storage]
     authority: DSB
     title: Bruk og oppbevaring av små gassbeholdere
     url: https://www.dsb.no/sikkerhverdag/gass-og-brannfarlig-vaske/bruk-og-oppbevaring-av-sma-gassbeholdere/
     verified_on: "2026-09-29"
     review_due: "2027-03-29"
   - id: dsb-gas-heaters
+    supports: [carbon_monoxide, fire, combustion, ventilation]
     authority: DSB
     title: Trygg bruk av gassovner
     url: https://www.dsb.no/sikkerhverdag/gass-og-brannfarlig-vaske/trygg-bruk-av-gassovner/
     verified_on: "2026-09-29"
     review_due: "2027-03-29"
   - id: dsb-carbon-monoxide
+    supports: [carbon_monoxide, combustion, ventilation]
     authority: DSB
     title: Slik unngår du kullosforgiftning
     url: https://www.dsb.no/sikkerhverdag/gass-og-brannfarlig-vaske/slik-unngar-du-kullosforgiftning/
     verified_on: "2026-09-29"
     review_due: "2027-03-29"
   - id: dsb-low-voltage-installations
+    supports: [electric_shock, backfeed, fire]
     authority: DSB
     title: Veiledning til forskrift om elektriske lavspenningsanlegg
     url: https://www.dsb.no/elsikkerhet/elektriske-anlegg-og-utstyr/veiledning-til-forskrift-om-elektriske-lavspenningsanlegg/
     verified_on: "2026-09-29"
     review_due: "2027-03-29"
   - id: dsb-ev-as-power-source
+    supports: [electric_shock, backfeed, fire]
     authority: DSB
     title: Elbilen som strømforsyning
     url: https://www.dsb.no/sikkerhverdag/strom/elbilen-som-stromforsyning/
     verified_on: "2026-09-29"
     review_due: "2027-03-29"
   - id: dsb-electrical-work-home
+    supports: [electric_shock, backfeed, fire]
     authority: DSB
     title: Elektrikerarbeid i boligen
     url: https://www.dsb.no/sikkerhverdag/strom/elektrikerarbeid-i-boligen/
     verified_on: "2026-09-29"
     review_due: "2027-03-29"
   - id: dsb-lithium-ion-fire-risk
+    supports: [battery, fire]
     authority: DSB
     title: Risikovurdering og håndtering av brann i Litium-ion batterier
     url: https://www.dsb.no/siteassets/rapporter-og-publikasjoner/veileder/risikovurdering_og_haandtering_av_brann_i_litium-ion_batterier.pdf
     verified_on: "2026-09-29"
     review_due: "2027-03-29"
   - id: eu-battery-regulation-stationary-safety
+    supports: [battery, fire]
     authority: European Union
     title: Regulation (EU) 2023/1542 - Article 12, safety of stationary battery energy storage systems
     url: https://eur-lex.europa.eu/eli/reg/2023/1542/2023-07-28
