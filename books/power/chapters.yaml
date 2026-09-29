@@ -24,7 +24,7 @@ chapters:
     "no": no/03-de-forste-minuttene.md
     en: en/03-the-first-minutes.md
     parity: required
-    parity_revision: 1
+    parity_revision: 2
   - id: heat
     "no": no/04-varme.md
     en: en/04-heat.md
