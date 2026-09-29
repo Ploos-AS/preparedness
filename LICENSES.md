@@ -1,22 +1,32 @@
 # Licensing
 
-This repository is intentionally mixed-license because it contains software, documentation and reusable data.
+This repository is intentionally mixed-license because it contains software, documentation, book manuscripts and reusable data.
 
 ## Software
 
-Source code under `tools/`, CI helpers and other software components are licensed under the **MIT License** unless a file states otherwise.
+Source code under `cmd/`, `internal/` and `tools/`, CI helpers, and other software components are licensed under the **MIT License** unless a file states otherwise.
+
+The full MIT licence text is provided in `LICENSES/MIT.txt`.
 
 ## Documentation and templates
 
 Documentation under `docs/` and reusable prose/templates intended for authoring are licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)** unless a file states otherwise.
 
+The full licence text is provided in `LICENSES/CC-BY-4.0.txt`.
+
+## Power book
+
+The manuscripts under `books/power/no/` and `books/power/en/` are licensed under **CC BY 4.0**, matching the explicit publication metadata in `publication.yaml`.
+
+Publication metadata, generated sale editions and distribution packages remain governed by the publishing lifecycle and product metadata; an enabled distribution channel is not itself a released publication.
+
 ## Structured data
 
-Reusable structured datasets under `data/` are intended to be broadly reusable and are licensed under **CC0 1.0 Universal** unless a specific dataset states otherwise. Source attribution and provenance fields remain required editorially even where the data licence does not require attribution.
+Original reusable structured datasets under `data/` are intended to be broadly reusable and are licensed under **CC0 1.0 Universal** unless a dataset or source record states otherwise.
 
-## Finished commercial books
+This does **not** relicense third-party source material. Source attribution, provenance and any upstream licence obligations remain applicable. Data derived from a source with attribution or other licence conditions must record and preserve those conditions.
 
-Finished book manuscripts, covers and sale editions are **not automatically licensed by this repository**. Each book repository must state its own publication copyright and licence terms explicitly. Shared open templates, code and data retain their original licences when embedded or referenced.
+The full CC0 legal text is provided in `LICENSES/CC0-1.0.txt`.
 
 ## Third-party material
 
@@ -24,4 +34,4 @@ Third-party text, images, standards extracts, manufacturer material and datasets
 
 ## Ploos-AS policy alignment
 
-This layout follows the broader Ploos-AS convention of MIT for software and Creative Commons for documentation, while treating open structured facts/data separately.
+This layout follows the broader Ploos-AS convention of MIT for software and Creative Commons for documentation and book content, while treating reusable structured facts/data separately.
