@@ -1,0 +1,22 @@
+schema_version: 1
+worksheet: cold-storage-log
+fields:
+  - date
+  - outage_start
+  - appliance
+  - starting_temperature_c
+  - door_openings
+  - time_points
+  - backup_power_used
+  - backup_energy_used_wh
+  - food_used_first
+  - food_discarded
+  - food_safety_guidance_checked
+  - lessons
+  - plan_updated
+time_point_fields:
+  - elapsed_hours
+  - measured_temperature_c
+  - power_state
+  - notes
+principle: Record actual temperatures and events so decisions can follow qualified food-safety guidance rather than guesswork.
