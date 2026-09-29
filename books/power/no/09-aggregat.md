@@ -94,7 +94,7 @@ Et frittstående aggregat som forsyner egnede apparater og en løsning som mater
 
 **Improvisert tilbakefeeding av boligens elektriske anlegg er farlig.**
 
-Fast eller alternativ mating av husinstallasjonen skal bruke en løsning som er korrekt prosjektert/installert for formålet og håndteres innenfor gjeldende norske regler og nødvendig fagkompetanse. Denne boka gir ikke en oppskrift på arbeid inne i 230 V-installasjonen.
+Fast eller alternativ mating av husinstallasjonen skal bruke en løsning som er korrekt prosjektert og installert for formålet. I Norge skal endringer i boligens elektriske anlegg normalt utføres og dokumenteres av en registrert elvirksomhet. Fast anlegg forsynt fra aggregat omfattes også av gjeldende elektriske sikkerhets- og meldingskrav. Denne boka gir ikke en oppskrift på arbeid inne i 230 V-installasjonen.
 
 ## 9. Vedlikehold og prøvekjøring
 
