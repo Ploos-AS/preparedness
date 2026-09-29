@@ -1,14 +1,29 @@
 #!/usr/bin/env python3
 """Generate compile-time preparedness defaults from authoritative baseline data."""
 from pathlib import Path
+import re
 import yaml
+
+class YAML12SafeLoader(yaml.SafeLoader):
+    pass
+
+for first, resolvers in list(YAML12SafeLoader.yaml_implicit_resolvers.items()):
+    YAML12SafeLoader.yaml_implicit_resolvers[first] = [
+        (tag, regexp) for tag, regexp in resolvers
+        if tag != "tag:yaml.org,2002:bool"
+    ]
+YAML12SafeLoader.add_implicit_resolver(
+    "tag:yaml.org,2002:bool",
+    re.compile(r"^(?:true|false)$", re.IGNORECASE),
+    list("tTfF"),
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "data/common/baseline.yaml"
 TARGET = ROOT / "internal/baseline/generated.go"
 
 with SOURCE.open(encoding="utf-8") as f:
-    data = yaml.safe_load(f)
+    data = yaml.load(f, Loader=YAML12SafeLoader)
 water = data["jurisdiction_overrides"]["NO"]["water"]
 if water.get("status") != "authoritative":
     raise SystemExit("NO water baseline is not authoritative")
