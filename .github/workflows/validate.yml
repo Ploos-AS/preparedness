@@ -16,6 +16,7 @@ jobs:
         with:
           python-version: "3.12"
           cache: pip
+          cache-dependency-path: requirements-ci.txt
       - run: pip install -r requirements-ci.txt
       - run: python tools/validate.py
 
@@ -26,7 +27,7 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version: "1.23.x"
-          cache: true
+          cache: false
       - run: go mod download
       - run: go test ./...
       - run: go build ./cmd/ploos-prep
