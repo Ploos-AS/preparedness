@@ -32,4 +32,6 @@ jobs:
       - run: test -z "$(gofmt -l cmd internal)"
       - run: go vet ./...
       - run: go test ./...
-      - run: go build ./cmd/ploos-prep
+      - run: go build -o ploos-prep ./cmd/ploos-prep
+      - run: pip install -r requirements-ci.txt
+      - run: python tools/validate_cli_output.py
