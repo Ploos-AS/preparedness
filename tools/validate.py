@@ -121,6 +121,27 @@ def parity_errors(base):
             errors += 1
     return errors
 
+def worksheet_errors(base, schema):
+    worksheet_dir=base/"worksheets"
+    if not worksheet_dir.is_dir():
+        return 0
+    errors=0
+    seen={}
+    for path in sorted(worksheet_dir.glob("*.yaml")):
+        errors += schema_errors(path, schema)
+        data=load_yaml(path)
+        worksheet_id=data.get("worksheet")
+        expected=path.stem
+        if worksheet_id != expected:
+            print(f"{path}: worksheet id {worksheet_id!r} must match filename {expected!r}")
+            errors += 1
+        if worksheet_id in seen:
+            print(f"{path}: duplicate worksheet id {worksheet_id!r}; first defined in {seen[worksheet_id]}")
+            errors += 1
+        else:
+            seen[worksheet_id]=path
+    return errors
+
 def main():
     errors=0
     errors += schema_errors(ROOT/"templates/book/book.yaml", load_json(ROOT/"schemas/book.schema.json"))
@@ -129,6 +150,7 @@ def main():
         errors += schema_errors(path, country_schema)
         errors += provenance_errors(path)
     chapter_schema=load_json(ROOT/"schemas/chapters.schema.json")
+    worksheet_schema=load_json(ROOT/"schemas/worksheet.schema.json")
     errors += schema_errors(ROOT/"templates/book/chapters.yaml", chapter_schema)
     errors += parity_errors(ROOT/"templates/book")
     for base in sorted((ROOT/"books").glob("*")) if (ROOT/"books").exists() else []:
@@ -141,6 +163,7 @@ def main():
                 errors += schema_errors(safety_registry, load_json(ROOT/"schemas/safety-sources.schema.json"))
             errors += safety_source_errors(base)
             errors += parity_errors(base)
+        errors += worksheet_errors(base, worksheet_schema)
     if errors:
         print(f"FAILED: {errors} validation error(s)")
         return 1
