@@ -1,0 +1,5 @@
+/ploos-prep
+/dist/
+/qualification-report.json
+/provenance.json
+*.tmp
