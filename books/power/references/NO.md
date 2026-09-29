@@ -144,21 +144,7 @@ Når en påstand avhenger av gjeldende regelverk, myndighetsråd, temperaturgren
 4. skriv hva kilden faktisk støtter
 5. skill kildefakta fra Ploos' planleggingsmetode
 
-
-## DSB — elbil og reservekraft (tilleggskvalifisering)
-
-### Elbilen som strømforsyning
-- URL: https://www.dsb.no/sikkerhverdag/strom/elbilen-som-stromforsyning/
-- Verified: 2026-09-29
-- Review due: 2027-03-29
-- Supports:
-  - V2L fra biler som støtter funksjonen, etter produsentens anvisninger
-  - V2L er ikke det samme som å mate boligens ordinære elektriske anlegg
-  - DSB beskriver særskilte begrensninger for skjøteledning fra bil/garasje
-  - separat lite fast reserveanlegg krever korrekt installasjon
-  - V2H krever sikker frakobling fra nettet og egnet installasjon
-
-### Elektrikerarbeid i boligen
+## DSB — elektrikerarbeid i boligen
 - URL: https://www.dsb.no/sikkerhverdag/strom/elektrikerarbeid-i-boligen/
 - Verified: 2026-09-29
 - Review due: 2027-03-29
@@ -166,12 +152,3 @@ Når en påstand avhenger av gjeldende regelverk, myndighetsråd, temperaturgren
   - endringer i boligens elektriske anlegg skal normalt utføres og dokumenteres av registrert elvirksomhet
   - samsvarserklæring/dokumentasjon
   - særskilte kvalifikasjonskrav gjelder for den begrensede muligheten til arbeid i egen bolig
-
-### FEL med veiledning
-- URL: https://www.dsb.no/elsikkerhet/elektriske-anlegg-og-utstyr/veiledning-til-forskrift-om-elektriske-lavspenningsanlegg/
-- Verified: 2026-09-29
-- Review due: 2027-03-29
-- Supports:
-  - forskriften omfatter reserve- og nødstrømsforsyning
-  - fast anlegg forsynt fra strømaggregat omfattes av kravene
-  - fast anlegg forsynt fra aggregat er meldingspliktig også når aggregatet er under 10 kVA
