@@ -1,0 +1,32 @@
+schema_version: 1
+worksheet: outage-timeline
+checkpoints:
+  - 15_minutes
+  - 1_hour
+  - 6_hours
+  - 12_hours
+  - 24_hours
+  - 48_hours
+  - 72_hours
+  - day_5
+  - day_7
+checkpoint_fields:
+  - people
+  - indoor_temperature
+  - water
+  - food
+  - refrigeration
+  - battery
+  - heating_fuel
+  - cooking_fuel
+  - generator_fuel
+  - communications
+  - sanitation
+  - information
+  - operating_mode
+  - relocation_status
+operating_modes:
+  - normal_preparedness
+  - conservation
+  - minimum
+  - relocate
