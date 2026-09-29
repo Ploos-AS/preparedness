@@ -5,6 +5,7 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"sort"
 
 	"github.com/Ploos-AS/preparedness/internal/calc"
 )
@@ -25,16 +26,25 @@ func usage() {
 	fmt.Fprintln(os.Stderr, "All calculations are offline and use SI units.")
 }
 
-func emit(tool string, inputs, result map[string]any, asJSON bool) {
+func emit(tool string, inputs, result map[string]any, asJSON bool) error {
 	if asJSON {
 		v := output{1, tool, inputs, result, "SI", nil, []string{}}
-		b, _ := json.MarshalIndent(v, "", "  ")
+		b, err := json.MarshalIndent(v, "", "  ")
+		if err != nil {
+			return fmt.Errorf("encode JSON output: %w", err)
+		}
 		fmt.Println(string(b))
-		return
+		return nil
 	}
-	for k, v := range result {
-		fmt.Printf("%s: %v\n", k, v)
+	keys := make([]string, 0, len(result))
+	for k := range result {
+		keys = append(keys, k)
 	}
+	sort.Strings(keys)
+	for _, k := range keys {
+		fmt.Printf("%s: %v\n", k, result[k])
+	}
+	return nil
 }
 
 func water(args []string) error {
@@ -43,10 +53,14 @@ func water(args []string) error {
 	days := f.Int("days", 0, "number of days")
 	rate := f.Float64("litres-per-person-day", 3, "planning litres per person per day")
 	j := f.Bool("json", false, "machine-readable JSON output")
-	if err := f.Parse(args); err != nil { return err }
-	v, err := calc.WaterLitres(*people, *days, *rate); if err != nil { return err }
-	emit("water", map[string]any{"people":*people,"days":*days,"litres_per_person_day":*rate}, map[string]any{"litres":v}, *j)
-	return nil
+	if err := f.Parse(args); err != nil {
+		return err
+	}
+	v, err := calc.WaterLitres(*people, *days, *rate)
+	if err != nil {
+		return err
+	}
+	return emit("water", map[string]any{"people": *people, "days": *days, "litres_per_person_day": *rate}, map[string]any{"litres": v}, *j)
 }
 
 func battery(args []string) error {
@@ -54,10 +68,14 @@ func battery(args []string) error {
 	voltage := f.Float64("voltage", 0, "battery voltage")
 	ah := f.Float64("ah", 0, "capacity in amp-hours")
 	j := f.Bool("json", false, "machine-readable JSON output")
-	if err := f.Parse(args); err != nil { return err }
-	v, err := calc.BatteryWh(*voltage, *ah); if err != nil { return err }
-	emit("battery", map[string]any{"voltage_v":*voltage,"capacity_ah":*ah}, map[string]any{"nominal_wh":v}, *j)
-	return nil
+	if err := f.Parse(args); err != nil {
+		return err
+	}
+	v, err := calc.BatteryWh(*voltage, *ah)
+	if err != nil {
+		return err
+	}
+	return emit("battery", map[string]any{"voltage_v": *voltage, "capacity_ah": *ah}, map[string]any{"nominal_wh": v}, *j)
 }
 
 func power(args []string) error {
@@ -65,21 +83,38 @@ func power(args []string) error {
 	wh := f.Float64("usable-wh", 0, "usable energy in watt-hours")
 	w := f.Float64("load-w", 0, "load in watts")
 	j := f.Bool("json", false, "machine-readable JSON output")
-	if err := f.Parse(args); err != nil { return err }
-	v, err := calc.RuntimeHours(*wh, *w); if err != nil { return err }
-	emit("power", map[string]any{"usable_wh":*wh,"load_w":*w}, map[string]any{"runtime_hours":v}, *j)
-	return nil
+	if err := f.Parse(args); err != nil {
+		return err
+	}
+	v, err := calc.RuntimeHours(*wh, *w)
+	if err != nil {
+		return err
+	}
+	return emit("power", map[string]any{"usable_wh": *wh, "load_w": *w}, map[string]any{"runtime_hours": v}, *j)
 }
 
 func main() {
-	if len(os.Args) < 2 { usage(); os.Exit(2) }
+	if len(os.Args) < 2 {
+		usage()
+		os.Exit(2)
+	}
 	var err error
 	switch os.Args[1] {
-	case "water": err = water(os.Args[2:])
-	case "battery": err = battery(os.Args[2:])
-	case "power": err = power(os.Args[2:])
-	case "help", "-h", "--help": usage(); return
-	default: usage(); err = fmt.Errorf("unknown command %q", os.Args[1])
+	case "water":
+		err = water(os.Args[2:])
+	case "battery":
+		err = battery(os.Args[2:])
+	case "power":
+		err = power(os.Args[2:])
+	case "help", "-h", "--help":
+		usage()
+		return
+	default:
+		usage()
+		err = fmt.Errorf("unknown command %q", os.Args[1])
 	}
-	if err != nil { fmt.Fprintln(os.Stderr, "error:", err); os.Exit(2) }
+	if err != nil {
+		fmt.Fprintln(os.Stderr, "error:", err)
+		os.Exit(2)
+	}
 }
