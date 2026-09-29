@@ -69,7 +69,7 @@ chapters:
     parity: required
     parity_revision: 2
     hazards: [electric_shock, fire, battery]
-    safety_sources: [dsb-low-voltage-installations]
+    safety_sources: [dsb-low-voltage-installations, dsb-lithium-ion-fire-risk, eu-battery-regulation-stationary-safety]
   - id: information
     "no": no/11-informasjon-og-kommunikasjon.md
     en: en/11-information-and-communications.md
