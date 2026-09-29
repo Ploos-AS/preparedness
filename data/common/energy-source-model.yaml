@@ -1,0 +1,19 @@
+schema_version: 1
+id: preparedness-energy-sources
+status: architecture
+sources:
+  battery:
+    role: stored_energy
+  generator:
+    role: fuel_to_electricity
+  solar:
+    role: variable_generation
+  ev:
+    role: mobile_stored_energy_when_supported
+principles:
+  - separate_power_w_from_energy_wh
+  - preserve_reserves
+  - qualify_starting_loads
+  - account_for_conversion_losses
+  - never_assume_building_backfeed_is_permitted
+  - preserve_required_ev_mobility
