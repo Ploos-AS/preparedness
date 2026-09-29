@@ -8,11 +8,30 @@ from jsonschema import Draft202012Validator, FormatChecker
 
 ROOT=Path(__file__).resolve().parents[1]
 
+# PyYAML defaults to YAML 1.1 boolean spellings, where unquoted "no"/"NO"
+# become False. Preparedness metadata uses ISO language/country codes, so use
+# YAML 1.2-style booleans: only true/false are booleans.
+class YAML12SafeLoader(yaml.SafeLoader):
+    pass
+
+for first, resolvers in list(YAML12SafeLoader.yaml_implicit_resolvers.items()):
+    YAML12SafeLoader.yaml_implicit_resolvers[first] = [
+        (tag, regexp) for tag, regexp in resolvers
+        if tag != "tag:yaml.org,2002:bool"
+    ]
+
+import re
+YAML12SafeLoader.add_implicit_resolver(
+    "tag:yaml.org,2002:bool",
+    re.compile(r"^(?:true|false)$", re.IGNORECASE),
+    list("tTfF"),
+)
+
 def load_json(path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 def load_yaml(path):
-    return yaml.safe_load(path.read_text(encoding="utf-8"))
+    return yaml.load(path.read_text(encoding="utf-8"), Loader=YAML12SafeLoader)
 
 def schema_errors(path, schema):
     data=load_yaml(path)
