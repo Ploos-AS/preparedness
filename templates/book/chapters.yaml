@@ -1,5 +1,9 @@
 schema_version: 1
 chapters:
+  - id: frontmatter
+    no: no/00-frontmatter.md
+    en: en/00-frontmatter.md
+    parity: required
   - id: introduction
     no: no/01-introduction.md
     en: en/01-introduction.md
