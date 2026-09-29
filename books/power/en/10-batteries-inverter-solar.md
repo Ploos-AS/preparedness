@@ -76,3 +76,13 @@ Reserve energy for the functions that matter most rather than treating every ava
 For each critical load record measured or documented watts, hours per day, duty cycle where relevant, starting watts and whether AC conversion is required.
 
 Then test the complete path you intend to use: charger, battery, inverter or DC output, cable and appliance. Real preparedness capacity is the capacity the system can deliver safely and repeatably, not merely the number printed on one component.
+
+## Safety must follow the battery chemistry
+
+Treat the battery bank, charger, cabling, over-current protection, inverter and any solar controller as one electrical system. Follow the limits specified for the actual battery chemistry and equipment, and use components and protection rated for the system voltage and current.
+
+Lithium-ion batteries can enter thermal runaway after internal damage or short circuit, and DSB notes that charging at low temperature can promote lithium dendrites that may cause an internal short circuit. This is a hazard to account for, not a universal temperature cut-off: the permitted charging range belongs to the specific battery and battery-management system.
+
+For a stationary battery energy storage system, use equipment whose safety has been assessed for its intended use. EU Regulation 2023/1542 Article 12 requires stationary battery energy storage systems to be safe during normal operation and use and subjects relevant safety parameters and hazards to testing and mitigation.
+
+Do not infer one ventilation rule, charging limit or temperature limit across different chemistries. Where the book gives a chemistry-specific limit, it must be traceable to a qualified primary source or to the manufacturer documentation for the actual system.
