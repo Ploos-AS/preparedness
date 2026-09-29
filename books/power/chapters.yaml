@@ -67,7 +67,7 @@ chapters:
     "no": no/10-batteribank-inverter-sol.md
     en: en/10-batteries-inverter-solar.md
     parity: required
-    parity_revision: 2
+    parity_revision: 3
     hazards: [electric_shock, fire, battery]
     safety_sources: [dsb-low-voltage-installations, dsb-lithium-ion-fire-risk, eu-battery-regulation-stationary-safety]
   - id: information
