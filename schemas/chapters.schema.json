@@ -22,7 +22,8 @@
           "id",
           "no",
           "en",
-          "parity"
+          "parity",
+          "parity_revision"
         ],
         "properties": {
           "id": {
@@ -65,6 +66,10 @@
               "type": "string",
               "pattern": "^[a-z0-9][a-z0-9-]*$"
             }
+          },
+          "parity_revision": {
+            "type": "integer",
+            "minimum": 1
           }
         }
       }
