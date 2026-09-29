@@ -23,8 +23,8 @@ jurisdiction_overrides:
         title: Vann i beredskap
         url: https://www.dsb.no/sikkerhverdag/egenberedskap/vann-i-beredskap/
         source_license: TO_VERIFY
-        verified_on: 2026-09-29
-        review_due: 2027-03-29
+        verified_on: "2026-09-29"
+        review_due: "2027-03-29"
     payments:
       principles:
         - multiple_payment_cards
@@ -39,8 +39,8 @@ jurisdiction_overrides:
         title: Egenberedskap for å betale
         url: https://www.norges-bank.no/egenberedskap
         source_license: TO_VERIFY
-        verified_on: 2026-09-29
-        review_due: 2027-03-29
+        verified_on: "2026-09-29"
+        review_due: "2027-03-29"
 notes:
   - "Cash amount is not a universal fixed number; base it on necessary purchases and what the household already stores."
   - "Country-specific facts require source and review metadata before publication."
