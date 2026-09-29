@@ -99,7 +99,7 @@ chapters:
     "no": no/15-arbeidsark.md
     en: en/15-worksheets.md
     parity: required
-    parity_revision: 1
+    parity_revision: 2
   - id: example-profiles
     "no": no/15a-eksempelprofiler.md
     en: en/15a-example-profiles.md
