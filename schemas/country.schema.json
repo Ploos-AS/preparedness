@@ -4,14 +4,88 @@
   "title": "Ploos Preparedness country data",
   "type": "object",
   "additionalProperties": true,
-  "required": ["schema_version","country","names","status"],
+  "required": [
+    "schema_version",
+    "country",
+    "names",
+    "status"
+  ],
   "properties": {
-    "schema_version":{"const":1},
-    "country":{"type":"string","pattern":"^[A-Z]{2}$"},
-    "names":{"type":"object","required":["no","en"],"properties":{"no":{"type":"string"},"en":{"type":"string"}}},
-    "status":{"enum":["seed","verified","review-due"]},
-    "verified_on":{"type":["string","null"],"format":"date"},
-    "review_due":{"type":["string","null"],"format":"date"},
-    "sources":{"type":"array","items":{"type":"object","required":["title","url"],"properties":{"title":{"type":"string"},"url":{"type":"string","format":"uri"},"accessed":{"type":["string","null"],"format":"date"}}}}
+    "schema_version": {
+      "const": 1
+    },
+    "country": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "names": {
+      "type": "object",
+      "required": [
+        "no",
+        "en"
+      ],
+      "properties": {
+        "no": {
+          "type": "string"
+        },
+        "en": {
+          "type": "string"
+        }
+      }
+    },
+    "status": {
+      "enum": [
+        "seed",
+        "verified",
+        "review-due"
+      ]
+    },
+    "verified_on": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "review_due": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "title",
+          "url"
+        ],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "accessed": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "source_license": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Licence or terms governing the cited source material; use TO_VERIFY until qualified."
+          }
+        }
+      }
+    }
   }
 }
