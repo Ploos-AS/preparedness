@@ -51,6 +51,21 @@ Ikke planlegg «hele huset som normalt» uten å ha beregnet effekt, energi, sta
 
 Aggregat eller batteri kan prioriteres mot kjøl/frys, vannpumpe og kommunikasjon. Sol kan bidra vesentlig når forholdene er gode. Mat- og drivstoffplanen bør likevel fungere når solproduksjonen er dårligere enn håpet.
 
+
+## Legg til privat brønn
+
+Et hus med privat brønn får en ekstra kritisk avhengighet. Pumpens normale effekt og starteffekt må passe til den planlagte strømkilden. Trykktankens faktiske tilgjengelige vannvolum kan gi en begrenset buffer, men dette bør måles i stedet for å utledes fra tankens nominelle størrelse.
+
+Lagret drikkevann er fortsatt en del av planen selv om pumpen har reservestrøm.
+
+## Legg til elbil
+
+Når bilen og godkjent utstyr støtter strømuttak, kan fremdriftsbatteriet gi en stor energireserve til egnede laster.
+
+Behold mobilitet som en bevisst reserve. Bestem hvor mye ladenivå som kan brukes til beredskap og hvor mye som skal stå igjen til transport. Skill mellom strømuttak til enkeltutstyr (V2L), et dedikert reserveanlegg og vehicle-to-home (V2H).
+
+Ikke improviser mating inn i boligens elektriske anlegg.
+
 ## Det viktigste med profilene
 
 Velg profilen som ligner mest på boligen og erstatt eksempelantakelsene med egne målinger. Målet er ikke å kjøpe alt som nevnes. Målet er at hver nødvendig funksjon har en gjennomtenkt hovedløsning og, der konsekvensen av svikt er stor, en realistisk reserve.
