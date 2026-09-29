@@ -145,6 +145,7 @@ def worksheet_errors(base, schema):
 def main():
     errors=0
     errors += schema_errors(ROOT/"templates/book/book.yaml", load_json(ROOT/"schemas/book.schema.json"))
+    errors += schema_errors(ROOT/"data/common/baseline.yaml", load_json(ROOT/"schemas/baseline.schema.json"))
     country_schema=load_json(ROOT/"schemas/country.schema.json")
     for path in sorted((ROOT/"data/countries").glob("*.yaml")):
         errors += schema_errors(path, country_schema)
