@@ -1,40 +1,107 @@
 schema_version: 1
 chapters:
-  - {id: introduction
-  parity_revision: 1}
-  - {id: housing
-  parity_revision: 2}
-  - {id: seasons
-  parity_revision: 1}
-  - {id: baseline
-  parity_revision: 1}
-  - {id: first-minutes
-  parity_revision: 1}
-  - {id: heat
-  parity_revision: 1, hazards: [carbon_monoxide, fire, combustion, ventilation], safety_sources: [dsb-heat-light-outage, dsb-gas-heaters, dsb-carbon-monoxide]}
-  - {id: cooking
-  parity_revision: 1, hazards: [carbon_monoxide, fire, combustion, fuel_storage], safety_sources: [dsb-small-gas-containers, dsb-carbon-monoxide]}
-  - {id: food-water
-  parity_revision: 1}
-  - {id: light
-  parity_revision: 1}
-  - {id: backup-power
-  parity_revision: 1, hazards: [electric_shock, backfeed, fire], safety_sources: [dsb-low-voltage-installations, dsb-ev-as-power-source, dsb-electrical-work-home]}
-  - {id: generator
-  parity_revision: 1, hazards: [carbon_monoxide, electric_shock, backfeed, fire, fuel_storage], safety_sources: [dsb-carbon-monoxide, dsb-low-voltage-installations, dsb-electrical-work-home]}
-  - {id: batteries
-  parity_revision: 2, hazards: [electric_shock, fire, battery], safety_sources: [dsb-low-voltage-installations]}
-  - {id: information
-  parity_revision: 1}
-  - {id: sanitation
-  parity_revision: 1}
-  - {id: plan
-  parity_revision: 1}
-  - {id: exercise
-  parity_revision: 1}
-  - {id: seven-day-scenario
-  parity_revision: 1}
-  - {id: worksheets
-  parity_revision: 1}
-  - {id: example-profiles
-  parity_revision: 2}
+  - id: introduction
+    "no": no/01-innledning.md
+    en: en/01-introduction.md
+    parity: required
+    parity_revision: 1
+  - id: housing
+    "no": no/02-hus-eller-leilighet.md
+    en: en/02-house-or-apartment.md
+    parity: required
+    parity_revision: 2
+  - id: seasons
+    "no": no/02b-sommer-vs-vinter.md
+    en: en/02b-summer-vs-winter.md
+    parity: required
+    parity_revision: 1
+  - id: baseline
+    "no": no/02c-grunnberedskapen.md
+    en: en/02c-the-preparedness-baseline.md
+    parity: required
+    parity_revision: 1
+  - id: first-minutes
+    "no": no/03-de-forste-minuttene.md
+    en: en/03-the-first-minutes.md
+    parity: required
+    parity_revision: 1
+  - id: heat
+    "no": no/04-varme.md
+    en: en/04-heat.md
+    parity: required
+    parity_revision: 1
+    hazards: [carbon_monoxide, fire, combustion, ventilation]
+    safety_sources: [dsb-heat-light-outage, dsb-gas-heaters, dsb-carbon-monoxide]
+  - id: cooking
+    "no": no/05-matlaging-uten-strom.md
+    en: en/05-cooking-without-power.md
+    parity: required
+    parity_revision: 1
+    hazards: [carbon_monoxide, fire, combustion, fuel_storage]
+    safety_sources: [dsb-small-gas-containers, dsb-carbon-monoxide]
+  - id: food-water
+    "no": no/06-mat-vann-kjol-og-frys.md
+    en: en/06-food-water-fridge-and-freezer.md
+    parity: required
+    parity_revision: 1
+  - id: light
+    "no": no/07-lys.md
+    en: en/07-light.md
+    parity: required
+    parity_revision: 1
+  - id: backup-power
+    "no": no/08-reservestrom.md
+    en: en/08-backup-power.md
+    parity: required
+    parity_revision: 1
+    hazards: [electric_shock, backfeed, fire]
+    safety_sources: [dsb-low-voltage-installations, dsb-ev-as-power-source, dsb-electrical-work-home]
+  - id: generator
+    "no": no/09-aggregat.md
+    en: en/09-generator.md
+    parity: required
+    parity_revision: 1
+    hazards: [carbon_monoxide, electric_shock, backfeed, fire, fuel_storage]
+    safety_sources: [dsb-carbon-monoxide, dsb-low-voltage-installations, dsb-electrical-work-home]
+  - id: batteries
+    "no": no/10-batteribank-inverter-sol.md
+    en: en/10-batteries-inverter-solar.md
+    parity: required
+    parity_revision: 2
+    hazards: [electric_shock, fire, battery]
+    safety_sources: [dsb-low-voltage-installations]
+  - id: information
+    "no": no/11-informasjon-og-kommunikasjon.md
+    en: en/11-information-and-communications.md
+    parity: required
+    parity_revision: 1
+  - id: sanitation
+    "no": no/12-vann-avlop-og-hygiene.md
+    en: en/12-water-sanitation-and-hygiene.md
+    parity: required
+    parity_revision: 1
+  - id: plan
+    "no": no/13-din-plan.md
+    en: en/13-your-plan.md
+    parity: required
+    parity_revision: 1
+  - id: exercise
+    "no": no/14-strombruddsovelsen.md
+    en: en/14-the-power-cut-drill.md
+    parity: required
+    parity_revision: 1
+  - id: seven-day-scenario
+    "no": no/14a-fra-72-timer-til-sju-dogn.md
+    en: en/14a-from-72-hours-to-seven-days.md
+    parity: required
+    parity_revision: 1
+  - id: worksheets
+    "no": no/15-arbeidsark.md
+    en: en/15-worksheets.md
+    parity: required
+    parity_revision: 1
+  - id: example-profiles
+    "no": no/15a-eksempelprofiler.md
+    en: en/15a-example-profiles.md
+    parity: required
+    parity_revision: 2
