@@ -1,0 +1,17 @@
+schema_version: 1
+id: outage-communications
+status: architecture
+layers:
+  - local_observation
+  - broadcast
+  - mobile
+  - internet
+  - agreed_contacts
+  - optional_receive_only_radio
+principles:
+  - preserve_phone_energy
+  - maintain_an_independent_receive_path
+  - keep_critical_contacts_on_paper
+  - test_home_network_backup_power
+  - unverified_reception_is_not_verified_information
+  - receiving_and_transmitting_are_separate_legal_and_technical_topics
