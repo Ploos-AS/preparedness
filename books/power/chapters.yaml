@@ -48,7 +48,7 @@ chapters:
     "no": no/07-lys.md
     en: en/07-light.md
     parity: required
-    parity_revision: 1
+    parity_revision: 2
   - id: backup-power
     "no": no/08-reservestrom.md
     en: en/08-backup-power.md
