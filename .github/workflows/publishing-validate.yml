@@ -1,0 +1,22 @@
+name: publishing-validate
+
+on:
+  push:
+    paths:
+      - "publication.yaml"
+      - "books/power/**"
+      - ".github/workflows/publishing-validate.yml"
+  pull_request:
+    paths:
+      - "publication.yaml"
+      - "books/power/**"
+      - ".github/workflows/publishing-validate.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  metadata:
+    uses: Ploos-AS/publishing/.github/workflows/reusable-book-validate.yml@v1
+    with:
+      metadata: publication.yaml
