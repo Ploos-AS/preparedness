@@ -64,3 +64,35 @@ Planen skal ha minst tre driftsmoduser:
 3. **minimumsdrift** — kommunikasjon, nødvendig lys og andre reelt kritiske behov
 
 `ploos-prep` skal gjøre disse scenariene sammenlignbare uten å skjule antakelsene.
+
+
+## Elbil som reservebatteri
+
+En elbil kan representere langt mer lagret energi enn en vanlig powerbank eller portabel batteribank, men funksjonen avhenger av bilen og løsningen.
+
+### V2L — Vehicle-to-Load
+
+Når bilen støtter V2L kan den levere strøm til egnet utstyr gjennom bilens godkjente løsning. Følg alltid bilprodusentens anvisninger og bilens effektgrenser.
+
+DSB presiserer at vanlig V2L ikke er det samme som å forsyne boligens ordinære elektriske anlegg. DSB beskriver også særskilte krav til plassering/bruk og til eventuelle separate faste reserveanlegg. Derfor skal boka ikke anbefale improviserte skjøtelednings- eller tilbakekoblingsløsninger.
+
+### V2H — Vehicle-to-Home
+
+V2H er en annen arkitektur: bilen og bygningen inngår i et system som kan forsyne valgte deler av installasjonen når nettet er borte. Dette krever egnet kjøretøy/ladeutstyr, sikker frakobling fra nettet og korrekt prosjektert/installert elektrisk anlegg.
+
+Boka behandler derfor tre forskjellige ting separat:
+
+**V2L til enkeltutstyr ≠ separat reserveanlegg ≠ V2H til bygning**
+
+### Energibudsjett
+
+Når V2L/V2H faktisk støttes, registreres:
+
+- tilgjengelig batterienergi som husholdningen vil avsette
+- maksimal tillatt uttakseffekt
+- minimum batterinivå som beholdes til kjøring
+- prioriterte laster
+- planlagt driftstid
+- hvordan bilen skal kunne lades igjen
+
+Bilen er fortsatt et transportmiddel. En beredskapsplan bør derfor ikke automatisk bruke hele fremdriftsbatteriet til huset.
