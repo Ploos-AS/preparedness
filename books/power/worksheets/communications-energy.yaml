@@ -1,0 +1,22 @@
+schema_version: 1
+worksheet: communications-energy
+device_fields:
+  - device
+  - quantity
+  - supply
+  - battery_wh
+  - measured_watts
+  - hours_per_day
+  - watt_hours_per_day
+  - priority
+  - charging_method
+  - minimum_mode
+devices_examples:
+  - phone
+  - powerbank
+  - broadcast_radio
+  - ont
+  - router
+  - switch
+  - receive_only_radio
+principle: Keep enough energy for minimum communications even if optional network equipment is shut down.
