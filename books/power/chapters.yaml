@@ -5,13 +5,13 @@ chapters:
   - {id: seasons, no: no/02b-sommer-vs-vinter.md, en: en/02b-summer-vs-winter.md, parity: required}
   - {id: baseline, no: no/02c-grunnberedskapen.md, en: en/02c-the-preparedness-baseline.md, parity: required}
   - {id: first-minutes, no: no/03-de-forste-minuttene.md, en: en/03-the-first-minutes.md, parity: required}
-  - {id: heat, no: no/04-varme.md, en: en/04-heat.md, parity: required, hazards: [carbon_monoxide, fire, combustion, ventilation]}
-  - {id: cooking, no: no/05-matlaging-uten-strom.md, en: en/05-cooking-without-power.md, parity: required, hazards: [carbon_monoxide, fire, combustion, fuel_storage]}
+  - {id: heat, no: no/04-varme.md, en: en/04-heat.md, parity: required, hazards: [carbon_monoxide, fire, combustion, ventilation], safety_sources: [dsb-heat-light-outage, dsb-gas-heaters, dsb-carbon-monoxide]}
+  - {id: cooking, no: no/05-matlaging-uten-strom.md, en: en/05-cooking-without-power.md, parity: required, hazards: [carbon_monoxide, fire, combustion, fuel_storage], safety_sources: [dsb-small-gas-containers, dsb-carbon-monoxide]}
   - {id: food-water, no: no/06-mat-vann-kjol-og-frys.md, en: en/06-food-water-fridge-and-freezer.md, parity: required}
   - {id: light, no: no/07-lys.md, en: en/07-light.md, parity: required}
-  - {id: backup-power, no: no/08-reservestrom.md, en: en/08-backup-power.md, parity: required, hazards: [electric_shock, backfeed, fire]}
-  - {id: generator, no: no/09-aggregat.md, en: en/09-generator.md, parity: required, hazards: [carbon_monoxide, electric_shock, backfeed, fire, fuel_storage]}
-  - {id: batteries, no: no/10-batteribank-inverter-sol.md, en: en/10-batteries-inverter-solar.md, parity: required, hazards: [electric_shock, fire, battery]}
+  - {id: backup-power, no: no/08-reservestrom.md, en: en/08-backup-power.md, parity: required, hazards: [electric_shock, backfeed, fire], safety_sources: [dsb-low-voltage-installations, dsb-ev-as-power-source, dsb-electrical-work-home]}
+  - {id: generator, no: no/09-aggregat.md, en: en/09-generator.md, parity: required, hazards: [carbon_monoxide, electric_shock, backfeed, fire, fuel_storage], safety_sources: [dsb-carbon-monoxide, dsb-low-voltage-installations, dsb-electrical-work-home]}
+  - {id: batteries, no: no/10-batteribank-inverter-sol.md, en: en/10-batteries-inverter-solar.md, parity: required, hazards: [electric_shock, fire, battery], safety_sources: [dsb-low-voltage-installations]}
   - {id: information, no: no/11-informasjon-og-kommunikasjon.md, en: en/11-information-and-communications.md, parity: required}
   - {id: sanitation, no: no/12-vann-avlop-og-hygiene.md, en: en/12-water-sanitation-and-hygiene.md, parity: required}
   - {id: plan, no: no/13-din-plan.md, en: en/13-your-plan.md, parity: required}
