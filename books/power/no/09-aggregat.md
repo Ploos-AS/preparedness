@@ -133,3 +133,10 @@ Om vinteren må plassering, start, snø, vind, tilgang og drivstoffhåndtering f
 Om sommeren kan sol bidra til batterilading, mens kjøl/frys eller vannpumpe kan få høyere prioritet.
 
 Aggregatplanen skal derfor ha minst én vintertest og én vurdering av sommerdrift.
+
+
+## 12. Tilbakefeeding er også en fare for andre
+
+Feil mating av en husinstallasjon kan ikke behandles som et privat eksperiment. DSB har dokumentert hendelser der aggregat på lavspenningssiden har spenningssatt anlegg som var antatt frakoblet. Reservekraft må derfor ha korrekt skille mot nettet og være prosjektert for formålet.
+
+Boka gir ingen «hann-hann-kabel», improvisert inntak eller annen oppskrift på tilbakefeeding.
