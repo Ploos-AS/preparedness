@@ -34,4 +34,6 @@ jobs:
       - run: go test ./...
       - run: go build -o ploos-prep ./cmd/ploos-prep
       - run: pip install -r requirements-ci.txt
+      - run: python tools/generate_baseline_go.py
+      - run: git diff --exit-code -- internal/baseline/generated.go
       - run: python tools/validate_cli_output.py
