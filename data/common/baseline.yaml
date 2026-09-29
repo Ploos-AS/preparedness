@@ -19,6 +19,11 @@ jurisdiction_overrides:
       stored_litres_per_person_week: 20
       status: authoritative
       authority: DSB
+      source:
+        title: Vann i beredskap
+        url: https://www.dsb.no/sikkerhverdag/egenberedskap/vann-i-beredskap/
+        verified_on: 2026-09-29
+        review_due: 2027-03-29
     payments:
       principles:
         - multiple_payment_cards
@@ -29,6 +34,11 @@ jurisdiction_overrides:
       cash_amount_rule: household_specific
       status: authoritative
       authority: Norges Bank
+      source:
+        title: Egenberedskap for å betale
+        url: https://www.norges-bank.no/egenberedskap
+        verified_on: 2026-09-29
+        review_due: 2027-03-29
 notes:
   - "Cash amount is not a universal fixed number; base it on necessary purchases and what the household already stores."
   - "Country-specific facts require source and review metadata before publication."
