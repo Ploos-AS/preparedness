@@ -22,6 +22,7 @@ jurisdiction_overrides:
       source:
         title: Vann i beredskap
         url: https://www.dsb.no/sikkerhverdag/egenberedskap/vann-i-beredskap/
+        source_license: TO_VERIFY
         verified_on: 2026-09-29
         review_due: 2027-03-29
     payments:
@@ -37,6 +38,7 @@ jurisdiction_overrides:
       source:
         title: Egenberedskap for å betale
         url: https://www.norges-bank.no/egenberedskap
+        source_license: TO_VERIFY
         verified_on: 2026-09-29
         review_due: 2027-03-29
 notes:
