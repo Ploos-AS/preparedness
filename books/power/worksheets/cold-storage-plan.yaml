@@ -1,0 +1,20 @@
+schema_version: 1
+worksheet: cold-storage-plan
+fields:
+  - appliance
+  - location
+  - normal_target_temperature_c
+  - thermometer_available
+  - priority_contents
+  - first_use_items
+  - backup_cold_storage_option
+  - backup_power_option
+  - backup_power_budget_wh
+  - monitoring_interval
+  - food_safety_authority
+  - notes
+principles:
+  - Keep fridge and freezer doors closed as much as practical during a power cut.
+  - Base food-safety decisions on measured temperature, time, food type and qualified current guidance.
+  - Do not use a universal discard-after-X-hours rule.
+  - Outdoor winter conditions are not automatically controlled cold storage.
