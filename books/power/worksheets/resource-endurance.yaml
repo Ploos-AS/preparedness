@@ -1,0 +1,19 @@
+schema_version: 1
+worksheet: resource-endurance
+resource_fields:
+  - resource
+  - starting_amount
+  - remaining_amount
+  - measured_daily_use
+  - estimated_days_remaining
+  - reserve_not_to_consume
+  - action_threshold
+resources:
+  - drinking_water
+  - battery_energy
+  - generator_fuel
+  - heating_fuel
+  - cooking_fuel
+  - shelf_stable_food
+  - medicines_or_critical_supplies
+principle: Recalculate endurance from measured consumption during the event.
