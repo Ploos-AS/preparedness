@@ -60,14 +60,35 @@ def parity_errors(base):
     manifest_path=base/"chapters.yaml"
     manifest=load_yaml(manifest_path)
     errors=0
+    referenced={"no": set(), "en": set()}
+    seen_ids=set()
     for chapter in manifest.get("chapters", []):
+        chapter_id=chapter.get("id")
+        if chapter_id in seen_ids:
+            print(f"{manifest_path}: duplicate chapter id {chapter_id!r}")
+            errors += 1
+        seen_ids.add(chapter_id)
         if chapter.get("parity") != "required":
             continue
         for lang in ("no","en"):
             rel=chapter.get(lang)
             if not rel or not (base/rel).is_file():
-                print(f"{manifest_path}: {chapter.get('id')}: missing {lang} chapter {rel!r}")
+                print(f"{manifest_path}: {chapter_id}: missing {lang} chapter {rel!r}")
                 errors += 1
+                continue
+            if rel in referenced[lang]:
+                print(f"{manifest_path}: duplicate {lang} chapter path {rel!r}")
+                errors += 1
+            referenced[lang].add(rel)
+
+    for lang in ("no","en"):
+        lang_dir=base/lang
+        if not lang_dir.is_dir():
+            continue
+        actual={str(path.relative_to(base)) for path in lang_dir.glob("*.md")}
+        for rel in sorted(actual - referenced[lang]):
+            print(f"{manifest_path}: unreferenced {lang} chapter {rel!r}")
+            errors += 1
     return errors
 
 def main():
