@@ -72,7 +72,11 @@ Propan er et relevant beredskapsdrivstoff for egnet kokeutstyr. Portable gassblu
 
 ## Kjøleskapet og fryseren er første matlager
 
-Ved strømbrudd bør dørene holdes lukket mest mulig. Lag en prioritert rekkefølge for maten når det blir nødvendig å bruke den. Ikke baser matsikkerhet på lukt eller smak alene; temperatur og tid er viktigere, og publiserte terskler skal komme fra kvalifiserte matsikkerhetskilder.
+Ved strømbrudd bør dørene holdes lukket mest mulig. Lag en prioritert rekkefølge for maten når det blir nødvendig å bruke den.
+
+Mattilsynets råd er at kjøleskapet bør være **under 4 °C, men over −1 °C**, og at fryseren skal være **−18 °C eller kaldere**. Bruk termometer. For lett bedervelig mat må eventuell merket oppbevaringstemperatur følges; hvor lenge en bestemt matvare kan være utenfor kjølekjeden avhenger blant annet av matvaren og mikrobiologisk risiko.
+
+Boken bruker derfor ikke en oppdiktet universell «etter X timer må alt kastes»-regel. Temperatur, tid, matvare og kvalifisert matsikkerhetsråd avgjør.
 
 ## Sommer
 
