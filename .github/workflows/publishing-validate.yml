@@ -17,6 +17,6 @@ permissions:
 
 jobs:
   metadata:
-    uses: Ploos-AS/publishing/.github/workflows/reusable-book-validate.yml@v1
+    uses: Ploos-AS/publishing/.github/workflows/reusable-book-validate.yml@v0.2.0
     with:
       metadata: publication.yaml
