@@ -1,0 +1,26 @@
+schema_version: 1
+worksheet: communications-plan
+people:
+  fields:
+    - name
+    - phone
+    - role
+    - meeting_point
+    - alternative_contact
+channels:
+  - local_observation
+  - neighbours
+  - broadcast_radio
+  - mobile_voice
+  - sms
+  - mobile_data
+  - home_internet
+  - receive_only_radio
+fields:
+  - primary_information_source
+  - backup_information_source
+  - contact_windows
+  - out_of_area_contact
+  - paper_copy_location
+  - minimum_mode
+principle: No single communications channel is assumed to remain available.
