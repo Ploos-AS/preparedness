@@ -84,7 +84,7 @@ chapters:
     "no": no/13-din-plan.md
     en: en/13-your-plan.md
     parity: required
-    parity_revision: 1
+    parity_revision: 2
   - id: exercise
     "no": no/14-strombruddsovelsen.md
     en: en/14-the-power-cut-drill.md
