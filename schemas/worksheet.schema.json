@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ploos.no/schemas/preparedness/worksheet.schema.json",
+  "title": "Ploos Preparedness worksheet",
+  "type": "object",
+  "required": ["schema_version", "worksheet"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "worksheet": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    }
+  },
+  "minProperties": 3,
+  "additionalProperties": true
+}
