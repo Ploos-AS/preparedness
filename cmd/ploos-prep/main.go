@@ -7,6 +7,7 @@ import (
 	"os"
 	"sort"
 
+	"github.com/Ploos-AS/preparedness/internal/baseline"
 	"github.com/Ploos-AS/preparedness/internal/calc"
 )
 
@@ -51,7 +52,7 @@ func water(args []string) error {
 	f := flag.NewFlagSet("water", flag.ContinueOnError)
 	people := f.Int("people", 0, "number of people")
 	days := f.Int("days", 0, "number of days")
-	rate := f.Float64("litres-per-person-day", 3, "planning litres per person per day")
+	rate := f.Float64("litres-per-person-day", baseline.NorwayStoredWaterLitresPerPersonDay, "planning litres per person per day")
 	j := f.Bool("json", false, "machine-readable JSON output")
 	if err := f.Parse(args); err != nil {
 		return err
