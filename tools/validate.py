@@ -56,6 +56,29 @@ def provenance_errors(path):
         errors += 1
     return errors
 
+def safety_source_errors(base):
+    manifest=load_yaml(base/"chapters.yaml")
+    registry_path=base/"references"/"safety.yaml"
+    hazard_chapters=[c for c in manifest.get("chapters", []) if c.get("hazards")]
+    if not hazard_chapters:
+        return 0
+    if not registry_path.is_file():
+        print(f"{base/'chapters.yaml'}: hazard chapters require {registry_path}")
+        return 1
+    registry=load_yaml(registry_path)
+    ids={source.get("id") for source in registry.get("sources", [])}
+    errors=0
+    for chapter in hazard_chapters:
+        refs=chapter.get("safety_sources", [])
+        if not refs:
+            print(f"{base/'chapters.yaml'}: {chapter.get('id')}: hazards require safety_sources")
+            errors += 1
+        for ref in refs:
+            if ref not in ids:
+                print(f"{base/'chapters.yaml'}: {chapter.get('id')}: unknown safety source {ref!r}")
+                errors += 1
+    return errors
+
 def parity_errors(base):
     manifest_path=base/"chapters.yaml"
     manifest=load_yaml(manifest_path)
@@ -106,6 +129,10 @@ def main():
             errors += schema_errors(base/"book.yaml", load_json(ROOT/"schemas/book.schema.json"))
         if (base/"chapters.yaml").is_file():
             errors += schema_errors(base/"chapters.yaml", chapter_schema)
+            safety_registry=base/"references"/"safety.yaml"
+            if safety_registry.is_file():
+                errors += schema_errors(safety_registry, load_json(ROOT/"schemas/safety-sources.schema.json"))
+            errors += safety_source_errors(base)
             errors += parity_errors(base)
     if errors:
         print(f"FAILED: {errors} validation error(s)")
