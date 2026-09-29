@@ -89,7 +89,7 @@ chapters:
     "no": no/14-strombruddsovelsen.md
     en: en/14-the-power-cut-drill.md
     parity: required
-    parity_revision: 1
+    parity_revision: 2
   - id: seven-day-scenario
     "no": no/14a-fra-72-timer-til-sju-dogn.md
     en: en/14a-from-72-hours-to-seven-days.md
