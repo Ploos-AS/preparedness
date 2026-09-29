@@ -121,6 +121,29 @@ def parity_errors(base):
             errors += 1
     return errors
 
+def baseline_provenance_errors(path):
+    data=load_yaml(path)
+    errors=0
+    for jurisdiction, override in data.get("jurisdiction_overrides", {}).items():
+        for domain, value in override.items():
+            if not isinstance(value, dict) or value.get("status") != "authoritative":
+                continue
+            source=value.get("source", {})
+            verified=source.get("verified_on")
+            due=source.get("review_due")
+            if not verified or not due:
+                continue
+            verified_date=date.fromisoformat(str(verified))
+            due_date=date.fromisoformat(str(due))
+            label=f"{jurisdiction}/{domain}"
+            if due_date <= verified_date:
+                print(f"{path}: {label}: review_due must be after verified_on")
+                errors += 1
+            if due_date < date.today():
+                print(f"{path}: {label}: authoritative source review is overdue ({due_date.isoformat()})")
+                errors += 1
+    return errors
+
 def worksheet_errors(base, schema):
     worksheet_dir=base/"worksheets"
     if not worksheet_dir.is_dir():
@@ -146,6 +169,7 @@ def main():
     errors=0
     errors += schema_errors(ROOT/"templates/book/book.yaml", load_json(ROOT/"schemas/book.schema.json"))
     errors += schema_errors(ROOT/"data/common/baseline.yaml", load_json(ROOT/"schemas/baseline.schema.json"))
+    errors += baseline_provenance_errors(ROOT/"data/common/baseline.yaml")
     country_schema=load_json(ROOT/"schemas/country.schema.json")
     for path in sorted((ROOT/"data/countries").glob("*.yaml")):
         errors += schema_errors(path, country_schema)
