@@ -1,0 +1,17 @@
+schema_version: 1
+worksheet: information-log
+entry_fields:
+  - time
+  - information
+  - source
+  - source_type
+  - verified
+  - action_required
+source_types:
+  - own_observation
+  - public_authority
+  - editorial_media
+  - neighbour_or_contact
+  - radio_reception
+  - unverified_online
+principle: Record source and verification status separately from the content of a claim.
