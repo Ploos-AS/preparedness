@@ -95,4 +95,8 @@ Test deretter hele kjeden du faktisk skal bruke: lader, batteri, inverter eller 
 
 Batteribank, lader, kabling, sikring, inverter og eventuell solregulator er ett elektrisk system. Følg produsentens grenser for den konkrete batterikjemien og utstyret, og bruk komponenter og beskyttelse som er beregnet for systemets spenning og strøm.
 
-Boka skal ikke anta universelle temperaturgrenser, ladegrenser eller ventilasjonskrav på tvers av batterikjemier. Slike sikkerhetskritiske grenser må kvalifiseres mot primærkilder før de oppgis som konkrete tall eller regler.
+Litium-ion-batterier kan gå inn i thermal runaway etter intern skade eller kortslutning, og DSB beskriver at lading ved lav temperatur kan fremme litiumdendritter som kan gi intern kortslutning. Dette er en fare som må håndteres, ikke en universell temperaturgrense: tillatt ladeområde følger det konkrete batteriet og batteristyringssystemet.
+
+For et stasjonært batterienergilager skal utstyret være sikkerhetsvurdert for den tiltenkte bruken. EU-forordning 2023/1542 artikkel 12 krever at stasjonære batterienergilagre er sikre ved normal drift og bruk, og at relevante sikkerhetsparametere og farer testes og håndteres.
+
+Boka skal ikke anta ett ventilasjonskrav, én ladegrense eller én temperaturgrense på tvers av batterikjemier. Når boka oppgir en kjemispesifikk grense, skal den kunne spores til en kvalifisert primærkilde eller produsentdokumentasjonen for det faktiske systemet.
