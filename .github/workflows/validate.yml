@@ -31,6 +31,10 @@ jobs:
       - run: go mod download
       - run: test -z "$(gofmt -l cmd internal)"
       - run: go vet ./...
+      - name: Install govulncheck
+        run: go install golang.org/x/vuln/cmd/govulncheck@latest
+      - name: Scan Go dependencies and reachable code
+        run: govulncheck ./...
       - run: go test ./...
       - run: go build -o ploos-prep ./cmd/ploos-prep
       - run: pip install -r requirements-ci.txt
