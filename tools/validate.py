@@ -165,8 +165,31 @@ def worksheet_errors(base, schema):
             seen[worksheet_id]=path
     return errors
 
+def yaml_portability_errors(root):
+    errors=0
+    ambiguous_key=re.compile(r"^(\\s*)(?:-\\s+)?(no|NO):(?:\\s|$)")
+    ambiguous_value=re.compile(r":\\s*(no|NO)\\s*(?:#.*)?$")
+    iso_date_value=re.compile(r":\\s*(\\d{4}-\\d{2}-\\d{2})\\s*(?:#.*)?$")
+    for path in sorted(list(root.rglob("*.yaml")) + list(root.rglob("*.yml"))):
+        # Generated/vendor trees can be added here if the repository gains them.
+        for lineno, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+            stripped=line.lstrip()
+            if not stripped or stripped.startswith("#"):
+                continue
+            if ambiguous_key.search(line):
+                print(f"{path}:{lineno}: quote YAML 1.1-ambiguous key no/NO")
+                errors += 1
+            if ambiguous_value.search(line):
+                print(f"{path}:{lineno}: quote YAML 1.1-ambiguous value no/NO")
+                errors += 1
+            if iso_date_value.search(line):
+                print(f"{path}:{lineno}: quote ISO date scalar for portable YAML typing")
+                errors += 1
+    return errors
+
 def main():
     errors=0
+    errors += yaml_portability_errors(ROOT)
     errors += schema_errors(ROOT/"templates/book/book.yaml", load_json(ROOT/"schemas/book.schema.json"))
     errors += schema_errors(ROOT/"data/common/baseline.yaml", load_json(ROOT/"schemas/baseline.schema.json"))
     errors += baseline_provenance_errors(ROOT/"data/common/baseline.yaml")
